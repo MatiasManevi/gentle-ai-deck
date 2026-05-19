@@ -7130,7 +7130,7 @@
           >
             <div class="slide-content">
               <p class="slide-kicker">19 · Engram</p>
-              <h2>Arquitecyoura: Go + SQLite + FTS5</h2>
+              <h2>Engram Architecture</h2>
               <p>
                 One binary. No external dependencies. SQLite with Full-Text
                 Search 5. Connects via MCP to 12 agents: Claude Code,
@@ -7199,7 +7199,7 @@
                   font-weight="700"
                   text-anchor="middle"
                 >
-                  Arquitecyoura: Go + SQLite + FTS5
+                  Go + SQLite + FTS5
                 </text>
                 <line
                   x1="135"
@@ -7272,7 +7272,7 @@
                   text-anchor="middle"
                   font-style="italic"
                 >
-                  + cualquier MCP agent
+                  + any MCP agent
                 </text>
                 <line
                   x1="148"
@@ -7393,7 +7393,7 @@
                   Go binary
                 </text>
                 <text x="382" y="151" fill="#8394A3" font-size="8">
-                  Compilado, rápido
+                  Compiled, fast
                 </text>
                 <rect
                   x="336"
@@ -7447,7 +7447,7 @@
                   SQLite
                 </text>
                 <text x="382" y="199" fill="#8394A3" font-size="8">
-                  Embebido, sin servidor
+                  Embedded, no server
                 </text>
                 <rect
                   x="336"
@@ -7504,7 +7504,7 @@
                   font-weight="600"
                   text-anchor="middle"
                 >
-                  Un binario. Sin dependencias. Funciona offline.
+                  One binary. No deps. Works offline.
                 </text>
               </svg>
             </figure>
@@ -7562,27 +7562,6 @@
                   </filter>
                 </defs>
 
-                <!-- Title -->
-                <text
-                  x="260"
-                  y="28"
-                  text-anchor="middle"
-                  fill="#F3F6F9"
-                  font-size="16"
-                  font-weight="700"
-                >
-                  Progressive Disclosure: 3 capas
-                </text>
-                <line
-                  x1="150"
-                  y1="38"
-                  x2="370"
-                  y2="38"
-                  stroke="#313342"
-                  stroke-width="1"
-                />
-
-                <!-- Layer 1 — mem_search (lightest) -->
                 <rect
                   x="20"
                   y="55"
@@ -7601,9 +7580,9 @@
                   font-size="12"
                   font-weight="600"
                 >
-                  Capa 1
+                  Layer 1
                 </text>
-                <text x="40" y="96" fill="#8394A3" font-size="10">Barato</text>
+                <text x="40" y="96" fill="#8394A3" font-size="10">Cheap</text>
                 <rect
                   x="160"
                   y="70"
@@ -7626,10 +7605,10 @@
                   mem_search
                 </text>
                 <text x="320" y="80" fill="#A1AABB" font-size="11">
-                  Tíyoulos + snippets
+                  Titles + snippets
                 </text>
                 <text x="320" y="96" fill="#8394A3" font-size="10">
-                  Results compactos
+                  Compact results
                 </text>
 
                 <!-- Arrow 1→2 -->
@@ -7662,9 +7641,9 @@
                   font-size="12"
                   font-weight="600"
                 >
-                  Capa 2
+                  Layer 2
                 </text>
-                <text x="40" y="183" fill="#8394A3" font-size="10">Medio</text>
+                <text x="40" y="183" fill="#8394A3" font-size="10">Medium</text>
                 <rect
                   x="160"
                   y="157"
@@ -7687,10 +7666,10 @@
                   mem_context
                 </text>
                 <text x="320" y="167" fill="#A1AABB" font-size="11">
-                  Contexto de sesión
+                  Session context
                 </text>
                 <text x="320" y="183" fill="#8394A3" font-size="10">
-                  Timeline reciente
+                  Recent timeline
                 </text>
 
                 <!-- Arrow 2→3 -->
@@ -7723,10 +7702,10 @@
                   font-size="12"
                   font-weight="700"
                 >
-                  Capa 3
+                  Layer 3
                 </text>
                 <text x="40" y="270" fill="#A1AABB" font-size="10">
-                  Profundo
+                  Deep
                 </text>
                 <rect
                   x="140"
@@ -7750,46 +7729,12 @@
                   mem_get_observation
                 </text>
                 <text x="340" y="254" fill="#F3F6F9" font-size="11">
-                  Contenido completo
+                  Full content
                 </text>
                 <text x="340" y="270" fill="#A1AABB" font-size="10">
-                  Sin truncar
+                  No truncate
                 </text>
 
-                <!-- "MÁS DETALLE" vertical label -->
-                <text
-                  x="12"
-                  y="195"
-                  fill="#8394A3"
-                  font-size="9"
-                  font-weight="600"
-                  transform="rotate(-90,12,195)"
-                  text-anchor="middle"
-                  letter-spacing="1.5"
-                >
-                  MÁS DETALLE
-                </text>
-
-                <!-- Bottom tagline -->
-                <rect
-                  x="90"
-                  y="298"
-                  width="340"
-                  height="18"
-                  rx="9"
-                  fill="#24283B"
-                  opacity="0.6"
-                />
-                <text
-                  x="260"
-                  y="312"
-                  text-anchor="middle"
-                  fill="#A1AABB"
-                  font-size="10"
-                  font-style="italic"
-                >
-                  El agente decide — mínimos tokens, máxima precisión
-                </text>
               </svg>
             </figure>
           </article>
