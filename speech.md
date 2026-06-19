@@ -11,7 +11,6 @@
   - Servidores MCP
   - AI provider switcher
   - Persona docente con permisos security-first
-  - Asignación de modelo por fase (cada paso de SDD corre en un modelo diferente)
 
 ### Slide 1
 - Pasamos de "ask and pray" a una línea de ensamblaje de expertos.
