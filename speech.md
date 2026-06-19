@@ -7,7 +7,7 @@
 - Es un **configurador de ecosistema**: toma el agente que uses y lo potencias con:
   - Memoria persistente (Engram)
   - Flujos SDD (Spec-Driven Development)
-  - Skills curadas por trigger
+  - Skills curadas
   - Servidores MCP
   - AI provider switcher
   - Persona docente con permisos security-first
