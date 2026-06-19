@@ -511,434 +511,467 @@
             data-tone="cyan"
           >
             <div class="slide-content">
-              <p class="slide-kicker">02 · Ecosystem Overview</p>
-              <h2>Engineering AI workflows</h2>
+              <p class="slide-kicker">02 · SDD Orchestrator</p>
+              <h2>Sub-agents: the assembly line of experts</h2>
               <p>
                 Instead of "ask and pray," we structure the work on an assembly
-                line of experts. Spec-Driven Development applies software
-                engineering principles to the AI workflow.
+                line of experts. The orchestrator delegates each phase to an
+                ephemeral sub-agent with fresh context. It spawns, executes,
+                reports, and dies.
+              </p>
+              <hr style="opacity: 0"/>
+              <p>
+                Skills resolve WHAT context to load, but a single agent still
+                accumulates noise. The orchestrator delegates each task to a
+                specialized sub-agent that receives only what it needs.
+                Maximum precision, zero accumulated noise.
               </p>
             </div>
             <figure class="slide-figure">
               <svg
                 viewBox="0 0 520 360"
                 xmlns="http://www.w3.org/2000/svg"
+                fill="none"
                 font-family="Space Grotesk,sans-serif"
+                role="img"
+                aria-label="Orchestrator delegating work to ephemeral sub-agents"
               >
                 <defs>
-                  <filter id="s18-glow-cyan">
-                    <feGaussianBlur stdDeviation="4" result="blur" />
-                    <feComposite
-                      in="SourceGraphic"
-                      in2="blur"
-                      operator="over"
+                  <linearGradient id="s13-line" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#7AA89F" stop-opacity="0.6" />
+                    <stop
+                      offset="100%"
+                      stop-color="#313342"
+                      stop-opacity="0.1"
                     />
-                  </filter>
-                  <filter id="s18-glow-red">
-                    <feGaussianBlur stdDeviation="3.5" result="blur" />
-                    <feComposite
-                      in="SourceGraphic"
-                      in2="blur"
-                      operator="over"
-                    />
-                  </filter>
-                  <filter id="s18-glow-accent">
-                    <feGaussianBlur stdDeviation="5" result="blur" />
-                    <feComposite
-                      in="SourceGraphic"
-                      in2="blur"
-                      operator="over"
-                    />
-                  </filter>
-                  <filter id="s18-soft">
-                    <feGaussianBlur stdDeviation="1.5" result="blur" />
-                    <feComposite
-                      in="SourceGraphic"
-                      in2="blur"
-                      operator="over"
-                    />
-                  </filter>
-                  <marker
-                    id="s18-arrow-cyan"
-                    markerWidth="8"
-                    markerHeight="6"
-                    refX="8"
-                    refY="3"
-                    orient="auto"
-                  >
-                    <path
-                      d="M0,0 L8,3 L0,6"
-                      fill="none"
-                      stroke="#7AA89F"
-                      stroke-width="1.5"
-                    />
-                  </marker>
-                  <marker
-                    id="s18-arrow-muted"
-                    markerWidth="7"
-                    markerHeight="5"
-                    refX="7"
-                    refY="2.5"
-                    orient="auto"
-                  >
-                    <path
-                      d="M0,0 L7,2.5 L0,5"
-                      fill="none"
-                      stroke="#8394A3"
-                      stroke-width="1.2"
-                    />
-                  </marker>
+                  </linearGradient>
                 </defs>
                 <text
                   x="260"
                   y="28"
                   text-anchor="middle"
-                  font-size="10"
-                  letter-spacing="2"
-                  fill="#A1AABB"
-                  text-transform="uppercase"
+                  fill="#F3F6F9"
+                  font-size="14.5"
+                  font-weight="600"
                 >
-                  THE PHILOSOPHY
+                  Divide and Conquer
                 </text>
                 <text
                   x="260"
-                  y="52"
+                  y="46"
                   text-anchor="middle"
-                  font-size="16"
-                  font-weight="600"
-                  fill="#F3F6F9"
-                >
-                  Engineering applied to AI
-                </text>
-                <line
-                  x1="180"
-                  y1="62"
-                  x2="340"
-                  y2="62"
-                  stroke="#313342"
-                  stroke-width="0.8"
-                />
-                <rect
-                  x="28"
-                  y="82"
-                  width="195"
-                  height="180"
-                  rx="12"
-                  fill="#1c212c"
-                  opacity="0.5"
-                />
-                <text
-                  x="125"
-                  y="105"
-                  text-anchor="middle"
-                  font-size="10"
-                  letter-spacing="1.5"
-                  fill="#CB7C94"
-                  opacity="0.8"
-                >
-                  ASK AND PRAY
-                </text>
-                <g transform="translate(125, 168)" filter="url(#s18-glow-red)">
-                  <rect
-                    x="-38"
-                    y="-32"
-                    width="76"
-                    height="52"
-                    rx="14"
-                    fill="none"
-                    stroke="#CB7C94"
-                    stroke-width="1.5"
-                    opacity="0.7"
-                  />
-                  <path
-                    d="M-8,20 L-14,32 L4,20"
-                    fill="none"
-                    stroke="#CB7C94"
-                    stroke-width="1.5"
-                    opacity="0.7"
-                  />
-                  <text
-                    x="0"
-                    y="2"
-                    text-anchor="middle"
-                    font-size="28"
-                    font-weight="700"
-                    fill="#CB7C94"
-                    opacity="0.6"
-                  >
-                    ?
-                  </text>
-                </g>
-                <circle cx="68" cy="140" r="2" fill="#8394A3" opacity="0.4" />
-                <circle
-                  cx="178"
-                  cy="132"
-                  r="1.5"
-                  fill="#8394A3"
-                  opacity="0.3"
-                />
-                <circle
-                  cx="82"
-                  cy="215"
-                  r="1.8"
-                  fill="#8394A3"
-                  opacity="0.35"
-                />
-                <circle cx="168" cy="222" r="2" fill="#8394A3" opacity="0.3" />
-                <circle
-                  cx="56"
-                  cy="190"
-                  r="1.2"
-                  fill="#8394A3"
-                  opacity="0.25"
-                />
-                <circle
-                  cx="190"
-                  cy="178"
-                  r="1.5"
-                  fill="#8394A3"
-                  opacity="0.3"
-                />
-                <text
-                  x="125"
-                  y="252"
-                  text-anchor="middle"
+                  fill="#A1AABB"
                   font-size="9"
-                  fill="#8394A3"
                 >
-                  One prompt, one sentence
+                  Delegate each phase to an ephemeral agent with fresh context
                 </text>
-                <g
-                  transform="translate(260, 170)"
-                  filter="url(#s18-glow-accent)"
-                >
-                  <rect
-                    x="-22"
-                    y="-22"
-                    width="44"
-                    height="44"
-                    rx="22"
-                    fill="#232A36"
-                    stroke="#E0C15A"
-                    stroke-width="1.2"
-                    opacity="0.8"
-                  />
-                  <text
-                    x="0"
-                    y="5"
-                    text-anchor="middle"
-                    font-size="22"
-                    font-weight="700"
-                    fill="#E0C15A"
-                  >
-                    →
-                  </text>
-                </g>
                 <rect
-                  x="297"
-                  y="82"
-                  width="195"
-                  height="180"
-                  rx="12"
+                  x="175"
+                  y="62"
+                  width="170"
+                  height="46"
+                  rx="10"
                   fill="#1c212c"
-                  opacity="0.5"
+                  stroke="#7AA89F"
+                  stroke-width="1.3"
+                  stroke-dasharray="6 3"
                 />
                 <text
-                  x="394"
-                  y="105"
+                  x="260"
+                  y="82"
                   text-anchor="middle"
-                  font-size="10"
-                  letter-spacing="1.5"
                   fill="#7AA89F"
+                  font-size="10.5"
+                  font-weight="600"
                 >
-                  ASSEMBLY LINE
+                  ORCHESTRATOR
+                </text>
+                <text
+                  x="260"
+                  y="97"
+                  text-anchor="middle"
+                  fill="#8394A3"
+                  font-size="7.5"
+                >
+                  lightweight · only coordinates
                 </text>
                 <line
-                  x1="318"
-                  y1="198"
-                  x2="472"
-                  y2="198"
-                  stroke="#313342"
-                  stroke-width="2"
-                  stroke-linecap="round"
+                  x1="218"
+                  y1="108"
+                  x2="100"
+                  y2="155"
+                  stroke="url(#s13-line)"
+                  stroke-width="1"
+                  stroke-dasharray="4 3"
                 />
-                <circle
-                  cx="322"
-                  cy="198"
-                  r="4"
-                  fill="none"
-                  stroke="#8394A3"
-                  stroke-width="1.2"
+                <line
+                  x1="260"
+                  y1="108"
+                  x2="260"
+                  y2="155"
+                  stroke="url(#s13-line)"
+                  stroke-width="1"
+                  stroke-dasharray="4 3"
                 />
-                <circle
-                  cx="468"
-                  cy="198"
-                  r="4"
-                  fill="none"
-                  stroke="#8394A3"
-                  stroke-width="1.2"
+                <line
+                  x1="302"
+                  y1="108"
+                  x2="420"
+                  y2="155"
+                  stroke="url(#s13-line)"
+                  stroke-width="1"
+                  stroke-dasharray="4 3"
                 />
-                <g filter="url(#s18-soft)">
+                <text
+                  x="152"
+                  y="134"
+                  text-anchor="middle"
+                  fill="#8394A3"
+                  font-size="6.5"
+                  opacity="0.7"
+                >
+                  spawn
+                </text>
+                <text
+                  x="260"
+                  y="134"
+                  text-anchor="middle"
+                  fill="#8394A3"
+                  font-size="6.5"
+                  opacity="0.7"
+                >
+                  spawn
+                </text>
+                <text
+                  x="368"
+                  y="134"
+                  text-anchor="middle"
+                  fill="#8394A3"
+                  font-size="6.5"
+                  opacity="0.7"
+                >
+                  spawn
+                </text>
+                <g opacity="0.92">
                   <rect
-                    x="325"
-                    y="148"
-                    width="36"
-                    height="36"
-                    rx="8"
-                    fill="#232A36"
-                    stroke="#7AA89F"
+                    x="30"
+                    y="152"
+                    width="140"
+                    height="90"
+                    rx="12"
+                    fill="#1c212c"
+                    stroke="#7FB4CA"
                     stroke-width="1.2"
+                    stroke-dasharray="5 3"
+                  />
+                  <rect
+                    x="42"
+                    y="178"
+                    width="116"
+                    height="32"
+                    rx="6"
+                    fill="#232A36"
+                    stroke="#313342"
+                    stroke-width="0.5"
+                    opacity="0.6"
                   />
                   <text
-                    x="343"
-                    y="140"
+                    x="100"
+                    y="196"
                     text-anchor="middle"
+                    fill="#8394A3"
                     font-size="7"
-                    fill="#A1AABB"
+                    opacity="0.5"
+                    font-style="italic"
+                  >
+                    empty context
+                  </text>
+                  <circle
+                    cx="56"
+                    cy="166"
+                    r="3.5"
+                    fill="#7FB4CA"
+                    opacity="0.7"
+                  />
+                  <text
+                    x="66"
+                    y="169.5"
+                    fill="#7FB4CA"
+                    font-size="10.5"
+                    font-weight="600"
                   >
                     Explore
                   </text>
+                  <g transform="translate(42, 222)">
+                    <text
+                      x="0"
+                      y="0"
+                      fill="#7FB4CA"
+                      font-size="6.5"
+                      opacity="0.8"
+                    >
+                      born
+                    </text>
+                    <text x="27" y="0" fill="#8394A3" font-size="6.5">→</text>
+                    <text x="34" y="0" fill="#A1AABB" font-size="6.5">
+                      execute
+                    </text>
+                    <text x="70" y="0" fill="#8394A3" font-size="6.5">→</text>
+                    <text x="77" y="0" fill="#A1AABB" font-size="6.5">
+                      report
+                    </text>
+                    <text x="113" y="0" fill="#8394A3" font-size="6.5">→</text>
+                    <text
+                      x="120"
+                      y="0"
+                      fill="#CB7C94"
+                      font-size="7"
+                      font-weight="600"
+                    >
+                      ✕
+                    </text>
+                  </g>
                 </g>
-                <line
-                  x1="365"
-                  y1="166"
-                  x2="376"
-                  y2="166"
-                  stroke="#7AA89F"
-                  stroke-width="1"
-                  marker-end="url(#s18-arrow-cyan)"
-                  opacity="0.6"
-                />
-                <g filter="url(#s18-soft)">
+                <g opacity="0.92">
                   <rect
-                    x="381"
-                    y="148"
-                    width="36"
-                    height="36"
-                    rx="8"
-                    fill="#232A36"
-                    stroke="#7FB4CA"
+                    x="190"
+                    y="152"
+                    width="140"
+                    height="90"
+                    rx="12"
+                    fill="#1c212c"
+                    stroke="#A3B5D6"
                     stroke-width="1.2"
+                    stroke-dasharray="5 3"
+                  />
+                  <rect
+                    x="202"
+                    y="178"
+                    width="116"
+                    height="32"
+                    rx="6"
+                    fill="#232A36"
+                    stroke="#313342"
+                    stroke-width="0.5"
+                    opacity="0.6"
                   />
                   <text
-                    x="399"
-                    y="140"
+                    x="260"
+                    y="196"
                     text-anchor="middle"
+                    fill="#8394A3"
                     font-size="7"
-                    fill="#A1AABB"
+                    opacity="0.5"
+                    font-style="italic"
                   >
-                    Spec
+                    empty context
                   </text>
-                </g>
-                <line
-                  x1="421"
-                  y1="166"
-                  x2="432"
-                  y2="166"
-                  stroke="#7AA89F"
-                  stroke-width="1"
-                  marker-end="url(#s18-arrow-cyan)"
-                  opacity="0.6"
-                />
-                <g filter="url(#s18-soft)">
-                  <rect
-                    x="437"
-                    y="148"
-                    width="36"
-                    height="36"
-                    rx="8"
-                    fill="#232A36"
-                    stroke="#B7CC85"
-                    stroke-width="1.2"
-                  />
-                  <text
-                    x="455"
-                    y="140"
-                    text-anchor="middle"
-                    font-size="7"
-                    fill="#A1AABB"
-                  >
-                    Apply
-                  </text>
-                </g>
-                <line
-                  x1="310"
-                  y1="166"
-                  x2="321"
-                  y2="166"
-                  stroke="#8394A3"
-                  stroke-width="1"
-                  marker-end="url(#s18-arrow-muted)"
-                  opacity="0.5"
-                />
-                <text
-                  x="394"
-                  y="218"
-                  text-anchor="middle"
-                  font-size="8"
-                  fill="#7AA89F"
-                  opacity="0.7"
-                >
-                  Specialized experts
-                </text>
-                <g transform="translate(394, 240)">
-                  <rect
-                    x="-14"
-                    y="-9"
-                    width="28"
-                    height="18"
-                    rx="4"
-                    fill="#232A36"
-                    stroke="#B7CC85"
-                    stroke-width="1"
+                  <circle
+                    cx="216"
+                    cy="166"
+                    r="3.5"
+                    fill="#A3B5D6"
                     opacity="0.7"
                   />
                   <text
-                    x="0"
-                    y="4"
-                    text-anchor="middle"
-                    font-size="9"
-                    fill="#B7CC85"
+                    x="226"
+                    y="169.5"
+                    fill="#A3B5D6"
+                    font-size="10.5"
+                    font-weight="600"
                   >
-                    ✓
+                    Design
                   </text>
+                  <g transform="translate(202, 222)">
+                    <text
+                      x="0"
+                      y="0"
+                      fill="#A3B5D6"
+                      font-size="6.5"
+                      opacity="0.8"
+                    >
+                      born
+                    </text>
+                    <text x="27" y="0" fill="#8394A3" font-size="6.5">→</text>
+                    <text x="34" y="0" fill="#A1AABB" font-size="6.5">
+                      execute
+                    </text>
+                    <text x="70" y="0" fill="#8394A3" font-size="6.5">→</text>
+                    <text x="77" y="0" fill="#A1AABB" font-size="6.5">
+                      report
+                    </text>
+                    <text x="113" y="0" fill="#8394A3" font-size="6.5">→</text>
+                    <text
+                      x="120"
+                      y="0"
+                      fill="#CB7C94"
+                      font-size="7"
+                      font-weight="600"
+                    >
+                      ✕
+                    </text>
+                  </g>
                 </g>
-                <text
-                  x="394"
-                  y="258"
-                  text-anchor="middle"
-                  font-size="7"
-                  fill="#8394A3"
-                >
-                  Verified result
-                </text>
-                <line
-                  x1="60"
-                  y1="282"
-                  x2="460"
-                  y2="282"
+                <g opacity="0.92">
+                  <rect
+                    x="350"
+                    y="152"
+                    width="140"
+                    height="90"
+                    rx="12"
+                    fill="#1c212c"
+                    stroke="#B7CC85"
+                    stroke-width="1.2"
+                    stroke-dasharray="5 3"
+                  />
+                  <rect
+                    x="362"
+                    y="178"
+                    width="116"
+                    height="32"
+                    rx="6"
+                    fill="#232A36"
+                    stroke="#313342"
+                    stroke-width="0.5"
+                    opacity="0.6"
+                  />
+                  <text
+                    x="420"
+                    y="196"
+                    text-anchor="middle"
+                    fill="#8394A3"
+                    font-size="7"
+                    opacity="0.5"
+                    font-style="italic"
+                  >
+                    empty context
+                  </text>
+                  <circle
+                    cx="376"
+                    cy="166"
+                    r="3.5"
+                    fill="#B7CC85"
+                    opacity="0.7"
+                  />
+                  <text
+                    x="386"
+                    y="169.5"
+                    fill="#B7CC85"
+                    font-size="10.5"
+                    font-weight="600"
+                  >
+                    Implement
+                  </text>
+                  <g transform="translate(362, 222)">
+                    <text
+                      x="0"
+                      y="0"
+                      fill="#B7CC85"
+                      font-size="6.5"
+                      opacity="0.8"
+                    >
+                      born
+                    </text>
+                    <text x="27" y="0" fill="#8394A3" font-size="6.5">→</text>
+                    <text x="34" y="0" fill="#A1AABB" font-size="6.5">
+                      execute
+                    </text>
+                    <text x="70" y="0" fill="#8394A3" font-size="6.5">→</text>
+                    <text x="77" y="0" fill="#A1AABB" font-size="6.5">
+                      report
+                    </text>
+                    <text x="113" y="0" fill="#8394A3" font-size="6.5">→</text>
+                    <text
+                      x="120"
+                      y="0"
+                      fill="#CB7C94"
+                      font-size="7"
+                      font-weight="600"
+                    >
+                      ✕
+                    </text>
+                  </g>
+                </g>
+                <rect
+                  x="145"
+                  y="275"
+                  width="230"
+                  height="24"
+                  rx="6"
+                  fill="#232A36"
                   stroke="#313342"
                   stroke-width="0.6"
+                  opacity="0.7"
                 />
                 <text
                   x="260"
-                  y="306"
+                  y="289"
                   text-anchor="middle"
-                  font-size="10.5"
-                  fill="#E0C15A"
+                  fill="#7AA89F"
+                  font-size="8.5"
                   font-weight="500"
-                  filter="url(#s18-glow-accent)"
+                  letter-spacing="0.5"
                 >
-                  Spec-Driven Development
+                  Fresh context on each task
+                </text>
+                <line
+                  x1="138"
+                  y1="233"
+                  x2="142"
+                  y2="233"
+                  stroke="#313342"
+                  stroke-width="1"
+                  stroke-dasharray="2 2"
+                  opacity="0.5"
+                />
+                <line
+                  x1="258"
+                  y1="233"
+                  x2="262"
+                  y2="233"
+                  stroke="#313342"
+                  stroke-width="1"
+                  stroke-dasharray="2 2"
+                  opacity="0.5"
+                />
+                <line
+                  x1="378"
+                  y1="233"
+                  x2="382"
+                  y2="233"
+                  stroke="#313342"
+                  stroke-width="1"
+                  stroke-dasharray="2 2"
+                  opacity="0.5"
+                />
+                <line
+                  x1="80"
+                  y1="305"
+                  x2="440"
+                  y2="305"
+                  stroke="#313342"
+                  stroke-width="0.5"
+                  opacity="0.5"
+                />
+                <text
+                  x="260"
+                  y="320"
+                  text-anchor="middle"
+                  font-size="11"
+                  fill="#B7CC85"
+                  font-weight="500"
+                  opacity="0.9"
+                >
+                  High precision, near-zero noise
                 </text>
                 <text
                   x="260"
-                  y="324"
+                  y="330"
                   text-anchor="middle"
-                  font-size="9"
-                  fill="#A1AABB"
+                  font-size="8"
+                  fill="#8394A3"
                 >
-                  Software engineering principles applied to the AI workflow
+                  Lightweight spawn · Minimum ctx · Total focus
                 </text>
               </svg>
             </figure>
