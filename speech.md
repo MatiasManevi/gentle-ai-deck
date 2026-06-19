@@ -1,90 +1,90 @@
-# Gentle-ai Ecosystem
-- Engram da persistencia y continuidad, SDD da estructura, Skills da consistencia
-- Juntos resuelven los tres problemas del LLM: amnesia, degradación y genericidad
-- No es una herramienta mágica — es un ecosistema que se configura
+# Apuntes para la presentación
 
-# Fixed size window
-- El contexto es todo lo que el modelo ve. Tamano fijo fisico medido en tokens.
+---
 
-# Compaction forced amnesia
-- Habran notado que cuanto mas interactuamos con el mismo agente, el resultado suele desviarse cada vez mas de nuestra intencion inicial. El resultado se desdibuja porque aumenta el ruido. Porque aumenta el ruido? por la compactacion
-- Porque se compacta?:
-- Se pierden decisiones iniciales tomadas
-- Ese summary forma parte de la siguiente prompt del usuario
+### Slide 0
+- Gentle AI **NO** es un instalador de agents. Instalar un agente es fácil.
+- Es un **configurador de ecosistema**: toma el agente que uses y lo potencias con:
+  - Memoria persistente (Engram)
+  - Flujos SDD (Spec-Driven Development)
+  - Skills curadas por trigger
+  - Servidores MCP
+  - AI provider switcher
+  - Persona docente con permisos security-first
+  - Asignación de modelo por fase (cada paso de SDD corre en un modelo diferente)
 
-# Start with Agends.md
-- El agente lee todo acerca de la estructura, convenciones, lineamientos y practicas para trabjar en el proyecto.
+### Slide 1
+- Pasamos de "ask and pray" a una línea de ensamblaje de expertos.
+- Spec-Driven Development: aplicar ingeniería de software al flujo de IA.
+- Cada fase tiene un entregable concreto: spec → design → tasks → code → verify.
+- No más prompts mágicos. Es un pipeline estructurado con entradas y salidas definidas.
 
-# Agents.md grow
-- Este archivo escala facilmente con la complejidad del pryecto, se vuelve dificil de mantener ademas de que
-ocupara demasiados tokens en la ventana de contexto. Mas contexto => mas probabilidad de alucionaciones
+### Slide 2
+- 7 roles especializados en el flujo SDD.
+- **Explorer**: lee y analiza el codebase. **Proposer**: define qué y por qué.
+- **Spec Writer**: requisitos + escenarios. **Designer**: arquitectura + decisiones.
+- **Task Planner**: divide en tareas. **Implementer**: escribe código siguiendo el diseño.
+- **Verifier**: valida contra specs. Cada rol es un sub-agente con su propia skill y contexto fresco.
 
-# Skills
-- Las skills surgen como medida para alivianar el peso del Agents.
-- Ahora un agent particionado unicamente conoce las rutas a las skills donde se describen las convenciones, arquitectura, practicas, etc.
-- No es lo mismo tener varios agent.md refactorizados? No, porque lo que tienen las skills son triggers.
-- Los triggers nos permiten cargar una skill a contexto on-demand, economizando la ventana de contexto (lazy-loading)
+### Slide 3
+- Ejemplo real: `/sdd:new create-users-endpoint`.
+- Explorer detecta stack (Next.js + Prisma) → Proposer define `POST /api/users` con Zod.
+- Spec + Design en paralelo → Tasks divide en 4 tareas (Model, Route, Validation, Test).
+- Implementer genera código → Verifier valida contra specs.
+- El orquestador nunca escribe código, solo orquesta. Cada sub-agente recibe contexto limpio.
 
-pensar: ¿Qué pasaría si tuvieras skills con las convenciones específicas de tu empresa? ¿Cómo cambiaría el onboarding de un dev nuevo que usa agentes?
+### Slide 4
+- Trabajás 2 horas definiendo arquitectura con el agente. El sistema compacta.
+- El agente ya no recuerda que decidiste Clean Architecture con DI. Genera código genérico.
+- El problema no es solo "olvidar" — es perder decisiones específicas de arquitectura, patrones y convenciones que ya habías resuelto.
+- La compactación forza amnesia: el summary reemplaza decisiones concretas por ruido general.
 
-# God agent
-- Aun habiendo partido el agents.md en skills y donde cada skill provee contexto atomico y particular, un unico agente haciendose cargo de todas las tareas aun teniendo una ventana de contexto grande puede llegar a ocuparla al 80% antes de siquiera escribir codigo.
-- Con esto corremos el riesgo de compactar mucho contenido antes de implementar -> lo cual lleva la IA a alucinar "con el contexto que tengo, te puedo responder esto"
+### Slide 5
+- Engram no guarda todo (eso es ruido), guarda **señales**: decisiones, errores resueltos, patrones.
+- Observaciones estructuradas con What / Why / Where / Learned.
+- El agente decide qué es señal y qué es ruido en cada save.
+- Un equipo de 3 devs: cada uno pierde sus propias decisiones, y nunca se enteran que las repiten o se contradicen entre sí. Engram rompe ese ciclo.
 
-# Divide & Conquer
-- El orquestador no trabaja, solamente coordina sub agentes
-- Cada subagente tiene su propio ctx, hace lo que debe hacer, y retorna los rtdos al orquestrador
+### Slide 6
+- Sesión 1: diseñás → `mem_save`. Sesión 2: implementás → `mem_search` recupera la decisión → código consistente.
+- Sin Engram, la sesión 2 ignora la sesión 1. Con Engram hay continuidad real.
+- El loop básico: guardar → buscar → reutilizar. No importa cuántas compactaciones ocurran entre medio.
 
-# Fresh context
-- Con esta arquitectura, cada subagente nace con un ctx muy liviano. Instrucciones especificas y cero ruido.
-- Cada agente carga el skill que necesita para su tarea.
+### Slide 7
+- Dos formas de sincronizar, ambas funcionan para solo o equipo.
+- **Git sync**: cero infra, async, commit-based, usás tu repo existente.
+- **Engram Cloud**: servidor self-hosted, dashboard web (templ + htmx), autosync en tiempo real, multi-user con roles.
+- Elegís según necesidad: simplicidad o visibilidad.
 
-# SDD
-- Spec-Driven Development: aplicar ingeniería de software al flujo de IA
-- En vez de "ask and pray", una línea de ensamblaje de expertos
-- Cada fase tiene un entregable concreto: spec → design → tasks → code → verify
+---
 
-# Roles
-- 7 roles especializados en el flujo SDD
-- Explorer (lee y analiza), Proposer (define qué y por qué), Spec Writer (requisitos + escenarios), Designer (arquitectura + decisiones), Task Planner (divide en tareas), Implementer (escribe código), Verifier (valida contra specs)
-- Cada rol es un sub-agente con su propia skill y contexto
+### Slide 8
+- Un solo `AGENTS.md` escala linealmente con la complejidad del proyecto → más tokens, más alucinaciones.
+- Las skills surgen para alivianar ese peso: descomponemos el monolito en módulos atómicos.
+- Ahora el agente solo conoce las rutas a las skills, no el contenido completo.
+- Cada skill se carga on-demand mediante triggers → lazy loading puro.
+- *pensar*: ¿Qué pasaría si tuvieras skills con las convenciones específicas de tu empresa? ¿Cómo cambiaría el onboarding de un dev nuevo?
 
-# Example
-- /sdd:new create-users-endpoint
-- Explorer detecta stack (Next.js + Prisma) → Proposer define POST /api/users con Zod → Spec + Design en paralelo → Tasks divide en 4 tareas (Model, Route, Validation, Test) → Implementer genera código → Verifier valida contra specs
-- El orquestador nunca escribe código, solo orquesta
+### Slide 9
+- Aun con skills modulares, un solo agente haciendo todo puede llenar el 80% de su contexto antes de escribir código.
+- Si compacta antes de implementar, alucina: "con el contexto que tengo, te puedo responder esto".
+- La solución: el **orquestador** nunca trabaja — solo coordina sub-agentes.
+- Cada sub-agente nace con contexto liviano, instrucciones específicas, y carga solo la skill que necesita.
 
-# Compaction kills decisions
-- Trabajás 2 horas definiendo arquitectura con el agente. El sistema compacta. El agente ya no recuerda que decidiste Clean Architecture con DI. Genera código genérico.
-- El problema no es solo "olvidar" — es perder decisiones específicas de arquitectura, patrones y convenciones que ya habías resuelto. El problema es no trabajar con consistencia
-- En un equipo de 3 devs cada uno pierde sus propias decisiones, y nunca se enteran que las repiten o se contradicen entre sí
-- Engram permite a los subagentes ir guardando informacion clave a medida que van trabajando.
+### Slide 10
+- Gentle AI incluye **21 skills** en tres categorías.
+- **SDD Workflow** (10 skills): init → explore → propose → spec → design → tasks → apply → verify → archive → onboard.
+- **Code Quality** (5): judgment-day, go-testing, branch-pr, chained-pr, work-unit-commits.
+- **Knowledge** (5): cognitive-doc-design, skill-creator, skill-improver, comment-writer, issue-creation.
+- Cada skill es un módulo autónomo con sus propios triggers, convenciones e instrucciones.
+- Se combinan como LEGO: usás lo que necesitás, ignorás el resto. Crear una skill custom es solo un archivo markdown con frontmatter.
 
-# Save signals, not everything
-- Engram no guarda todo (eso es ruido), guarda señales: decisiones, errores resueltos, patrones
-- Observaciones estructuradas con What / Why / Where / Learned
-- El agente decide qué es señal y qué es ruido
+---
 
-# The Engram Loop
-- Sesión 1: diseño → mem_save. Sesión 2: implementación → mem_search recupera la decisión → código consistente
-- Sin Engram, la sesión 2 ignora la sesión 1. Con Engram hay continuidad real
-- El loop básico: guardar → buscar → reutilizar
-
-# Git or Cloud
-- Dos formas de sincronizar, ambas funcionan para solo o equipo
-- Git sync: cero infra, async, commit-based, usás tu repo existente
-- Engram Cloud: servidor self-hosted, dashboard web (templ + htmx), autosync en tiempo real, multi-user con roles
-- Elegís según necesidad: simplicidad o visibilidad
-
-# The Goodies
-- Velocidad por automatización. Consistencia por skills. Calidad por verificación contra specs
-- Eficiencia en el uso de memoria y ventana de contexto
-- Todo open source, todo combinable
-
-# Closing
-Creo que gentle ai se destaca como un potente configurador de ecosistemas que nos permite primero que nada
-1. ir más allá de simples interacciones de chat y adoptar un uso mas directo de la IA
-2. Nos permite estructurar, configurar y especializar un flujo de trabajo de IA robusto y listo para que todo un equipo de desarrollo se beneficie en conjunto del mismo flujo de SDD y skills definidas por las convenciones del proyecto en particular
-3. Creo que es una herramienta que vale la pena probar, en conjunto, significativamente la productividad y la fiabilidad de los agentes de IA existentes mientras.
-
-Si bien Gentle-AI ofrece una experiencia única y optimizada, forma parte de un panorama creciente de marcos de orquestación sofisticados, cada uno adaptado a diferentes necesidades arquitectónicas y preferencias de los desarrolladores.
+### Cierre
+- Gentle AI es un potente **configurador de ecosistemas**.
+- Nos permite ir más allá del chat estructurando un flujo de trabajo de IA robusto.
+- Velocidad por automatización. Consistencia por skills. Calidad por verificación contra specs.
+- Eficiencia en el uso de memoria y ventana de contexto.
+- Diseñado para que todo un equipo se beneficie del mismo flujo SDD y las mismas skills definidas por las convenciones del proyecto.
+- Todo open source, todo combinable.

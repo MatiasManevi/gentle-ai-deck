@@ -1,0 +1,47 @@
+# openspec/config.yaml
+schema: spec-driven
+
+context: |
+  Project: gentle-ai-deck
+  Tech stack: Vanilla HTML/CSS/JS (no frameworks, no bundlers)
+  Architecture: Single-page presentation/deck with SVG slide graphics, module rail navigation, keyboard controls (← → F)
+  Testing: None — no test runner, test framework, or test files detected
+  Style: Dark theme, Space Grotesk font, CSS custom properties for theming, Node.js excluded via .gitignore
+
+rules:
+  proposal:
+    - Include rollback plan for risky changes
+  specs:
+    - Use Given/When/Then for scenarios
+    - Use RFC 2119 keywords (MUST, SHALL, SHOULD, MAY)
+  design:
+    - Include sequence diagrams for complex flows
+    - Document architecture decisions with rationale
+  tasks:
+    - Group by phase, use hierarchical numbering
+    - Keep tasks completable in one session
+  apply:
+    - Follow existing code patterns
+    tdd: false
+    test_command: ""
+  verify:
+    test_command: ""
+    build_command: ""
+    coverage_threshold: 0
+  archive:
+    - Warn before merging destructive deltas
+
+testing:
+  strict_tdd: false
+  reason: "No test runner or test framework detected — no package.json, go.mod, pyproject.toml, or Makefile found"
+  test_runner: none
+  test_framework: none
+  layers:
+    unit: false
+    integration: false
+    e2e: false
+  coverage: false
+  quality:
+    linter: none
+    type_checker: none
+    formatter: none
