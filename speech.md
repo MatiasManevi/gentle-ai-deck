@@ -1,15 +1,7 @@
-# What is an LLM: prediction, not thinking
-- Completan patrones estadisticos
-- Calidad de resultado depende directamente de la calidad de contexto.
-
-# What an LLM is NOT
-- No es una base de datos, no aprende de tus conversaciones, no entiende como un humano, no es determinista
-- Si no sabés esto, vas a tener expectativas incorrectas y frustración constante
-
-# Chat vs Agent
-- Todos hemos experimentado en un comienzo con chatgpt
-- Pero un agente actua, influye en el environment que le das
-- Un agente es mas un pair programming. Un agente es un chatbot pero con herramientas para ACTUAR
+# Gentle-ai Ecosystem
+- Engram da persistencia y continuidad, SDD da estructura, Skills da consistencia
+- Juntos resuelven los tres problemas del LLM: amnesia, degradación y genericidad
+- No es una herramienta mágica — es un ecosistema que se configura
 
 # Fixed size window
 - El contexto es todo lo que el modelo ve. Tamano fijo fisico medido en tokens.
@@ -83,11 +75,6 @@ pensar: ¿Qué pasaría si tuvieras skills con las convenciones específicas de 
 - Git sync: cero infra, async, commit-based, usás tu repo existente
 - Engram Cloud: servidor self-hosted, dashboard web (templ + htmx), autosync en tiempo real, multi-user con roles
 - Elegís según necesidad: simplicidad o visibilidad
-
-# Gentle-ai Ecosystem
-- Engram da persistencia y continuidad, SDD da estructura, Skills da consistencia
-- Juntos resuelven los tres problemas del LLM: amnesia, degradación y genericidad
-- No es una herramienta mágica — es un ecosistema que se configura
 
 # The Goodies
 - Velocidad por automatización. Consistencia por skills. Calidad por verificación contra specs
