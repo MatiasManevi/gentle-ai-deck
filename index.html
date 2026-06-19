@@ -22,7 +22,7 @@
         </div>
         <div class="stayous">
           <span id="mode-badge" class="mode-badge">NORMAL</span>
-          <span id="counter">01 / 34</span>
+          <span id="counter">01 / 8</span>
           <span class="hint">← → navigate · F focus</span>
         </div>
       </header>
@@ -34,645 +34,42 @@
       <div class="stage-layout">
         <nav class="rail" aria-label="Modules">
           <div class="rail-module" data-module="0">
-            <button class="rail-title" data-first="0">1. LLMs</button>
+            <button class="rail-title" data-first="0">1. The ecosystem</button>
             <div class="rail-dots" id="dots-0"></div>
           </div>
           <div class="rail-module" data-module="1">
-            <button class="rail-title" data-first="2">2. Chat vs Agent</button>
+            <button class="rail-title" data-first="1">
+              2. SDD Orchestrator
+            </button>
             <div class="rail-dots" id="dots-1"></div>
           </div>
           <div class="rail-module" data-module="2">
-            <button class="rail-title" data-first="3">3. Context Window</button>
+            <button class="rail-title" data-first="4">3. Engram</button>
             <div class="rail-dots" id="dots-2"></div>
           </div>
           <div class="rail-module" data-module="3">
-            <button class="rail-title" data-first="5">
-              4. 1st Context Evolution
-            </button>
-            <div class="rail-dots" id="dots-3"></div>
-          </div>
-          <div class="rail-module" data-module="4">
-            <button class="rail-title" data-first="9">5. 2nd Context Evolution</button>
-            <div class="rail-dots" id="dots-4"></div>
-          </div>
-          <div class="rail-module" data-module="5">
-            <button class="rail-title" data-first="11">
-              6. SDD Orchestrator
-            </button>
-            <div class="rail-dots" id="dots-5"></div>
-          </div>
-          <div class="rail-module" data-module="6">
-            <button class="rail-title" data-first="14">7. Engram</button>
-            <div class="rail-dots" id="dots-6"></div>
-          </div>
-          <div class="rail-module" data-module="7">
-            <button class="rail-title" data-first="18">
-              8. Results
-            </button>
+            <button class="rail-title" data-first="13">4. Skills</button>
             <div class="rail-dots" id="dots-7"></div>
           </div>
-          <div class="rail-module" data-module="8">
-            <button class="rail-title" data-first="26">9. Closing</button>
-            <div class="rail-dots" id="dots-8"></div>
-          </div>
+          <!-- <div class="rail-module" data-module="4">
+            <button class="rail-title" data-first="23">5. MCP</button>
+            <div class="rail-dots" id="dots-12"></div>
+          </div> -->
         </nav>
-
         <main class="viewport" id="viewport">
-          <!-- M1: IA GENERATIVA (3) -->
-
           <article
-            class="slide is-active"
+            class="slide"
             data-index="0"
             data-module="0"
-            data-tone="blue"
-          >
-            <div class="slide-content">
-              <p class="slide-kicker">01 · LLMs</p>
-              <h2>What is an LLM: prediction, not thinking</h2>
-              <p>
-                A Large Language Model is a neural network with billions of
-                parameters trained to predict the next token. It doesn't
-                "think": it completes statistical patterns. The quality of
-                the output depends on the quality of the context you give it.
-              </p>
-            </div>
-            <figure class="slide-figure">
-              <svg
-                viewBox="0 0 520 360"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Token prediction diagram in an LLM"
-              >
-                <defs>
-                  <filter
-                    id="glow-green"
-                    x="-40%"
-                    y="-40%"
-                    width="180%"
-                    height="180%"
-                  >
-                    <feGaussianBlur stdDeviation="6" result="blur" />
-                    <feMerge>
-                      <feMergeNode in="blur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                </defs>
-                <!-- Input tokens -->
-                <text
-                  x="135"
-                  y="16"
-                  text-anchor="middle"
-                  fill="#A1AABB"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="10"
-                  letter-spacing="2"
-                >
-                  INPUT TOKENS
-                </text>
-                <rect
-                  x="20"
-                  y="30"
-                  width="70"
-                  height="34"
-                  rx="8"
-                  fill="#232A36"
-                  stroke="#7FB4CA"
-                  stroke-width="1.5"
-                />
-                <text
-                  x="55"
-                  y="52"
-                  text-anchor="middle"
-                  fill="#7FB4CA"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="12"
-                  font-weight="500"
-                >
-                  Hello
-                </text>
-                <rect
-                  x="100"
-                  y="30"
-                  width="70"
-                  height="34"
-                  rx="8"
-                  fill="#232A36"
-                  stroke="#7FB4CA"
-                  stroke-width="1.5"
-                />
-                <text
-                  x="135"
-                  y="52"
-                  text-anchor="middle"
-                  fill="#7FB4CA"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="12"
-                  font-weight="500"
-                >
-                  how
-                </text>
-                <rect
-                  x="180"
-                  y="30"
-                  width="70"
-                  height="34"
-                  rx="8"
-                  fill="#232A36"
-                  stroke="#7FB4CA"
-                  stroke-width="1.5"
-                />
-                <text
-                  x="215"
-                  y="52"
-                  text-anchor="middle"
-                  fill="#7FB4CA"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="12"
-                  font-weight="500"
-                >
-                  are you
-                </text>
-                <!-- Arrows to neural net -->
-                <line
-                  x1="55"
-                  y1="64"
-                  x2="260"
-                  y2="128"
-                  stroke="#8394A3"
-                  stroke-width="1"
-                  stroke-dasharray="4 3"
-                />
-                <line
-                  x1="135"
-                  y1="64"
-                  x2="260"
-                  y2="128"
-                  stroke="#8394A3"
-                  stroke-width="1"
-                  stroke-dasharray="4 3"
-                />
-                <line
-                  x1="215"
-                  y1="64"
-                  x2="260"
-                  y2="128"
-                  stroke="#8394A3"
-                  stroke-width="1"
-                  stroke-dasharray="4 3"
-                />
-                <!-- Neural network -->
-                <rect
-                  x="170"
-                  y="120"
-                  width="180"
-                  height="80"
-                  rx="16"
-                  fill="#1c212c"
-                  stroke="#A3B5D6"
-                  stroke-width="1.5"
-                />
-                <text
-                  x="260"
-                  y="150"
-                  text-anchor="middle"
-                  fill="#A3B5D6"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="13"
-                  font-weight="700"
-                >
-                  Neural Network
-                </text>
-                <text
-                  x="260"
-                  y="170"
-                  text-anchor="middle"
-                  fill="#8394A3"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="10"
-                >
-                  Billions of parameters
-                </text>
-                <text
-                  x="260"
-                  y="186"
-                  text-anchor="middle"
-                  fill="#8394A3"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="10"
-                >
-                  Statistical patterns
-                </text>
-                <circle cx="205" cy="155" r="3" fill="#A3B5D6" opacity="0.3" />
-                <circle cx="300" cy="155" r="3" fill="#A3B5D6" opacity="0.3" />
-                <circle
-                  cx="220"
-                  cy="145"
-                  r="2.5"
-                  fill="#A3B5D6"
-                  opacity="0.2"
-                />
-                <circle
-                  cx="315"
-                  cy="148"
-                  r="2.5"
-                  fill="#A3B5D6"
-                  opacity="0.2"
-                />
-                <!-- Arrow down -->
-                <line
-                  x1="260"
-                  y1="200"
-                  x2="260"
-                  y2="240"
-                  stroke="#8394A3"
-                  stroke-width="1.5"
-                />
-                <polygon points="254,236 260,248 266,236" fill="#8394A3" />
-                <!-- Probabilities -->
-                <text
-                  x="260"
-                  y="268"
-                  text-anchor="middle"
-                  fill="#A1AABB"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="10"
-                  letter-spacing="2"
-                >
-                  PROBABILITIES
-                </text>
-                <rect
-                  x="80"
-                  y="280"
-                  width="60"
-                  height="28"
-                  rx="6"
-                  fill="#232A36"
-                  stroke="#8394A3"
-                  stroke-width="1"
-                />
-                <text
-                  x="110"
-                  y="299"
-                  text-anchor="middle"
-                  fill="#8394A3"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="10"
-                >
-                  hi 12%
-                </text>
-                <rect
-                  x="150"
-                  y="280"
-                  width="60"
-                  height="28"
-                  rx="6"
-                  fill="#232A36"
-                  stroke="#8394A3"
-                  stroke-width="1"
-                />
-                <text
-                  x="180"
-                  y="299"
-                  text-anchor="middle"
-                  fill="#8394A3"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="10"
-                >
-                  you 8%
-                </text>
-                <rect
-                  x="220"
-                  y="280"
-                  width="80"
-                  height="28"
-                  rx="6"
-                  fill="#232A36"
-                  stroke="#B7CC85"
-                  stroke-width="2"
-                  filter="url(#glow-green)"
-                />
-                <text
-                  x="260"
-                  y="299"
-                  text-anchor="middle"
-                  fill="#B7CC85"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="11"
-                  font-weight="700"
-                >
-                  good 67%
-                </text>
-                <rect
-                  x="310"
-                  y="280"
-                  width="60"
-                  height="28"
-                  rx="6"
-                  fill="#232A36"
-                  stroke="#8394A3"
-                  stroke-width="1"
-                />
-                <text
-                  x="340"
-                  y="299"
-                  text-anchor="middle"
-                  fill="#8394A3"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="10"
-                >
-                  bad 5%
-                </text>
-                <rect
-                  x="380"
-                  y="280"
-                  width="60"
-                  height="28"
-                  rx="6"
-                  fill="#232A36"
-                  stroke="#8394A3"
-                  stroke-width="1"
-                />
-                <text
-                  x="410"
-                  y="299"
-                  text-anchor="middle"
-                  fill="#8394A3"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="10"
-                >
-                  ... 8%
-                </text>
-                <!-- Bottom label -->
-                <text
-                  x="260"
-                  y="336"
-                  text-anchor="middle"
-                  fill="#CB7C94"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="11"
-                  font-weight="500"
-                >
-                  Predicts the most likely · Does NOT "understand"
-                </text>
-                <!-- Not equals annotation -->
-              </svg>
-            </figure>
-          </article>
-
-            <article
-            class="slide"
-            data-index="1"
-            data-module="0"
-            data-tone="blue"
-          >
-            <div class="slide-content">
-              <p class="slide-kicker">02 · LLMs</p>
-              <h2>What an LLM is NOT</h2>
-              <p>
-                It's not a database, it doesn't learn from your conversations,
-                it doesn't understand like a human, it's not deterministic. If
-                you don't know this, you'll have incorrect expectations and
-                constant frustration.
-              </p>
-            </div>
-            <figure class="slide-figure">
-              <svg
-                viewBox="0 0 520 360"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Mitos sobre LLMs desmentidos"
-              >
-                <!-- Row 1 -->
-                <rect
-                  x="36"
-                  y="46"
-                  width="218"
-                  height="56"
-                  rx="10"
-                  fill="#1c212c"
-                  stroke="#CB7C94"
-                  stroke-width="1.5"
-                />
-                <text
-                  x="62"
-                  y="72"
-                  fill="#CB7C94"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="18"
-                  font-weight="700"
-                >
-                  ✕
-                </text>
-                <text
-                  x="86"
-                  y="68"
-                  fill="#F3F6F9"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="12"
-                  font-weight="600"
-                >
-                  Not a database
-                </text>
-                <text
-                  x="86"
-                  y="86"
-                  fill="#8394A3"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="10"
-                >
-                  Doesn't store, just generates text
-                </text>
-                <!-- Row 2 -->
-                <rect
-                  x="266"
-                  y="46"
-                  width="218"
-                  height="56"
-                  rx="10"
-                  fill="#1c212c"
-                  stroke="#CB7C94"
-                  stroke-width="1.5"
-                />
-                <text
-                  x="292"
-                  y="72"
-                  fill="#CB7C94"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="18"
-                  font-weight="700"
-                >
-                  ✕
-                </text>
-                <text
-                  x="316"
-                  y="68"
-                  fill="#F3F6F9"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="12"
-                  font-weight="600"
-                >
-                  Does not learn
-                </text>
-                <text
-                  x="316"
-                  y="86"
-                  fill="#8394A3"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="10"
-                >
-                  Your chats do not re-train it
-                </text>
-                <!-- Row 3 -->
-                <rect
-                  x="36"
-                  y="120"
-                  width="218"
-                  height="56"
-                  rx="10"
-                  fill="#1c212c"
-                  stroke="#CB7C94"
-                  stroke-width="1.5"
-                />
-                <text
-                  x="62"
-                  y="146"
-                  fill="#CB7C94"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="18"
-                  font-weight="700"
-                >
-                  ✕
-                </text>
-                <text
-                  x="86"
-                  y="142"
-                  fill="#F3F6F9"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="12"
-                  font-weight="600"
-                >
-                  Does not understand
-                </text>
-                <text
-                  x="86"
-                  y="160"
-                  fill="#8394A3"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="10"
-                >
-                  It just completes patterns
-                </text>
-                <!-- Row 4 -->
-                <rect
-                  x="266"
-                  y="120"
-                  width="218"
-                  height="56"
-                  rx="10"
-                  fill="#1c212c"
-                  stroke="#CB7C94"
-                  stroke-width="1.5"
-                />
-                <text
-                  x="292"
-                  y="146"
-                  fill="#CB7C94"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="18"
-                  font-weight="700"
-                >
-                  ✕
-                </text>
-                <text
-                  x="316"
-                  y="142"
-                  fill="#F3F6F9"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="12"
-                  font-weight="600"
-                >
-                  Non-deterministic
-                </text>
-                <text
-                  x="316"
-                  y="160"
-                  fill="#8394A3"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="10"
-                >
-                  Same prompt -> different answer
-                </text>
-                <!-- Divider -->
-                <line
-                  x1="140"
-                  y1="210"
-                  x2="380"
-                  y2="210"
-                  stroke="#313342"
-                  stroke-width="1"
-                />
-                <!-- Consequence -->
-                <rect
-                  x="100"
-                  y="235"
-                  width="320"
-                  height="80"
-                  rx="14"
-                  fill="#232A36"
-                  stroke="#E0C15A"
-                  stroke-width="1.5"
-                />
-                <text
-                  x="260"
-                  y="262"
-                  text-anchor="middle"
-                  fill="#E0C15A"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="13"
-                  font-weight="700"
-                >
-                  With wrong expectations
-                </text>
-                <text
-                  x="260"
-                  y="282"
-                  text-anchor="middle"
-                  fill="#A1AABB"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="11"
-                >
-                  = frustration
-                </text>
-                <text
-                  x="260"
-                  y="302"
-                  text-anchor="middle"
-                  fill="#8394A3"
-                  font-family="Space Grotesk,sans-serif"
-                  font-size="10"
-                >
-                  Knowing what it is Not, helps you using it
-                </text>
-              </svg>
-            </figure>
-          </article>
-<article
-            class="slide"
-            data-index="2"
-            data-module="1"
             data-tone="green"
           >
             <div class="slide-content">
-              <p class="slide-kicker">03 · Chat vs Agent</p>
-              <h2>Chat responds text. Agent acts.</h2>
+              <p class="slide-kicker">01 · SDD Orchestrator</p>
+              <h2>gentle-ai Ecosystem</h2>
               <p>
-                A chat generates text. An agent reads your code, edits files,
-                runs tests, and saves learning. It's the difference between
-                asking someone for advice and having a pair-programmer with access
-                to your project.
+                Engram provides continuity, SDD provides structure, Skills
+                provides consistency. Together they solve the three problems
+                of the LLM: amnesia, degradation, and genericity.
               </p>
             </div>
             <figure class="slide-figure">
@@ -680,3323 +77,441 @@
                 viewBox="0 0 520 360"
                 xmlns="http://www.w3.org/2000/svg"
                 font-family="Space Grotesk,sans-serif"
-                role="img"
-                aria-label="Comparativa chat vs agente"
               >
                 <defs>
-                  <filter
-                    id="s8-glow"
-                    x="-20%"
-                    y="-20%"
-                    width="140%"
-                    height="140%"
-                  >
-                    <feGaussianBlur stdDeviation="2.5" result="blur" />
-                    <feComposite
-                      in="SourceGraphic"
-                      in2="blur"
-                      operator="over"
-                    />
+                  <filter id="s41-glow">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
                   </filter>
-                </defs>
-                <!-- Left: Chat -->
-                <rect
-                  x="20"
-                  y="50"
-                  width="220"
-                  height="280"
-                  rx="12"
-                  fill="#1c212c"
-                  stroke="#8394A3"
-                  stroke-width="1"
-                  opacity="0.6"
-                />
-                <text
-                  x="130"
-                  y="36"
-                  text-anchor="middle"
-                  font-size="10"
-                  letter-spacing="2"
-                  fill="#8394A3"
-                >
-                  CHAT
-                </text>
-                <rect
-                  x="65"
-                  y="120"
-                  width="130"
-                  height="42"
-                  rx="10"
-                  fill="#232A36"
-                  stroke="#8394A3"
-                  stroke-width="1"
-                  opacity="0.7"
-                />
-                <text
-                  x="130"
-                  y="146"
-                  text-anchor="middle"
-                  font-size="12"
-                  fill="#8394A3"
-                >
-                  Prompt
-                </text>
-                <line
-                  x1="130"
-                  y1="162"
-                  x2="130"
-                  y2="198"
-                  stroke="#8394A3"
-                  stroke-width="1.2"
-                  opacity="0.5"
-                />
-                <polygon
-                  points="125,194 130,204 135,194"
-                  fill="#8394A3"
-                  opacity="0.5"
-                />
-                <rect
-                  x="65"
-                  y="204"
-                  width="130"
-                  height="42"
-                  rx="10"
-                  fill="#232A36"
-                  stroke="#8394A3"
-                  stroke-width="1"
-                  opacity="0.7"
-                />
-                <text
-                  x="130"
-                  y="230"
-                  text-anchor="middle"
-                  font-size="12"
-                  fill="#8394A3"
-                >
-                  Text response
-                </text>
-                <text
-                  x="130"
-                  y="290"
-                  text-anchor="middle"
-                  font-size="10"
-                  fill="#8394A3"
-                  font-style="italic"
-                >
-                  Just generates text
-                </text>
-                <!-- Divider -->
-                <line
-                  x1="260"
-                  y1="50"
-                  x2="260"
-                  y2="330"
-                  stroke="#313342"
-                  stroke-width="1.2"
-                  stroke-dasharray="6,4"
-                />
-                <rect
-                  x="247"
-                  y="180"
-                  width="26"
-                  height="20"
-                  rx="6"
-                  fill="#1c212c"
-                  stroke="#313342"
-                  stroke-width="1"
-                />
-                <text
-                  x="260"
-                  y="194"
-                  text-anchor="middle"
-                  font-size="9"
-                  fill="#A1AABB"
-                  font-weight="700"
-                >
-                  vs
-                </text>
-                <!-- Right: Agente -->
-                <rect
-                  x="280"
-                  y="50"
-                  width="220"
-                  height="280"
-                  rx="12"
-                  fill="#1c212c"
-                  stroke="#313342"
-                  stroke-width="1"
-                />
-                <text
-                  x="390"
-                  y="36"
-                  text-anchor="middle"
-                  font-size="10"
-                  letter-spacing="2"
-                  fill="#A1AABB"
-                >
-                  AGENT
-                </text>
-                <rect
-                  x="320"
-                  y="80"
-                  width="140"
-                  height="36"
-                  rx="9"
-                  fill="#232A36"
-                  stroke="#7FB4CA"
-                  stroke-width="1.3"
-                  filter="url(#s8-glow)"
-                />
-                <text
-                  x="390"
-                  y="103"
-                  text-anchor="middle"
-                  font-size="11"
-                  fill="#F3F6F9"
-                >
-                  Reads code
-                </text>
-                <line
-                  x1="390"
-                  y1="116"
-                  x2="390"
-                  y2="134"
-                  stroke="#7FB4CA"
-                  stroke-width="1.2"
-                  opacity="0.6"
-                />
-                <polygon
-                  points="386,131 390,139 394,131"
-                  fill="#7FB4CA"
-                  opacity="0.6"
-                />
-                <rect
-                  x="320"
-                  y="140"
-                  width="140"
-                  height="36"
-                  rx="9"
-                  fill="#232A36"
-                  stroke="#B7CC85"
-                  stroke-width="1.3"
-                />
-                <text
-                  x="390"
-                  y="163"
-                  text-anchor="middle"
-                  font-size="11"
-                  fill="#F3F6F9"
-                >
-                  Edit files
-                </text>
-                <line
-                  x1="390"
-                  y1="176"
-                  x2="390"
-                  y2="194"
-                  stroke="#B7CC85"
-                  stroke-width="1.2"
-                  opacity="0.6"
-                />
-                <polygon
-                  points="386,191 390,199 394,191"
-                  fill="#B7CC85"
-                  opacity="0.6"
-                />
-                <rect
-                  x="320"
-                  y="200"
-                  width="140"
-                  height="36"
-                  rx="9"
-                  fill="#232A36"
-                  stroke="#7AA89F"
-                  stroke-width="1.3"
-                />
-                <text
-                  x="390"
-                  y="223"
-                  text-anchor="middle"
-                  font-size="11"
-                  fill="#F3F6F9"
-                >
-                  Run tests
-                </text>
-                <line
-                  x1="390"
-                  y1="236"
-                  x2="390"
-                  y2="254"
-                  stroke="#7AA89F"
-                  stroke-width="1.2"
-                  opacity="0.6"
-                />
-                <polygon
-                  points="386,251 390,259 394,251"
-                  fill="#7AA89F"
-                  opacity="0.6"
-                />
-                <rect
-                  x="320"
-                  y="260"
-                  width="140"
-                  height="36"
-                  rx="9"
-                  fill="#232A36"
-                  stroke="#A3B5D6"
-                  stroke-width="1.3"
-                />
-                <text
-                  x="390"
-                  y="283"
-                  text-anchor="middle"
-                  font-size="11"
-                  fill="#F3F6F9"
-                >
-                  Store memory
-                </text>
-                <text
-                  x="390"
-                  y="318"
-                  text-anchor="middle"
-                  font-size="10"
-                  fill="#B7CC85"
-                  font-weight="500"
-                  font-style="italic"
-                >
-                  Acts in the environment
-                </text>
-              </svg>
-            </figure>
-          </article>
-<article
-            class="slide"
-            data-index="3"
-            data-module="2"
-            data-tone="yellow"
-          >
-            <div class="slide-content">
-              <p class="slide-kicker">04 · Context Window</p>
-              <h2>The fixed-size whiteboard</h2>
-              <p>
-                The context is everything the model "sees": system prompt,
-                history, files read, your instruction. The context window is
-                the physical size of that whiteboard, measured in tokens.
-              </p>
-            </div>
-            <figure class="slide-figure">
-              <svg
-                viewBox="0 0 520 360"
-                xmlns="http://www.w3.org/2000/svg"
-                font-family="Space Grotesk,sans-serif"
-                role="img"
-                aria-label="Anatomy of the context window"
-              >
-                <defs>
-                  <filter
-                    id="s3-glow"
-                    x="-10%"
-                    y="-10%"
-                    width="120%"
-                    height="120%"
-                  >
+                  <filter id="s41-glowSoft">
                     <feGaussianBlur stdDeviation="6" result="blur" />
                     <feMerge>
                       <feMergeNode in="blur" />
                       <feMergeNode in="SourceGraphic" />
                     </feMerge>
                   </filter>
+                  <marker
+                    id="s41-arrow"
+                    viewBox="0 0 10 10"
+                    refX="9"
+                    refY="5"
+                    markerWidth="6"
+                    markerHeight="6"
+                    orient="auto-start-reverse"
+                  >
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#A1AABB" />
+                  </marker>
                 </defs>
                 <text
                   x="260"
                   y="32"
                   text-anchor="middle"
-                  font-size="10"
-                  letter-spacing="2"
-                  fill="#A1AABB"
-                >
-                  CONTEXT WINDOW
-                </text>
-                <text
-                  x="260"
-                  y="58"
-                  text-anchor="middle"
-                  font-size="17"
                   fill="#F3F6F9"
+                  font-size="16"
                   font-weight="700"
                 >
-                  The fixed-size whiteboard
-                </text>
-                <text
-                  x="260"
-                  y="78"
-                  text-anchor="middle"
-                  font-size="10.5"
-                  fill="#8394A3"
-                >
-                  Everything the model "sees" fits in a finite space
+                  Engram + SDD + Skills
                 </text>
                 <rect
                   x="30"
-                  y="100"
-                  width="460"
-                  height="120"
+                  y="62"
+                  width="140"
+                  height="150"
                   rx="12"
                   fill="#1c212c"
-                  stroke="#313342"
+                  stroke="#FF8DD7"
                   stroke-width="1.5"
-                  opacity="0.5"
                 />
                 <rect
-                  x="36"
-                  y="106"
-                  width="50"
-                  height="108"
-                  rx="8"
-                  fill="#7AA89F"
-                  opacity="0.12"
-                />
-                <rect
-                  x="36"
-                  y="106"
-                  width="50"
-                  height="108"
-                  rx="8"
-                  fill="none"
-                  stroke="#7AA89F"
-                  stroke-width="1.2"
-                  opacity="0.6"
-                />
-                <text
-                  x="61"
-                  y="155"
-                  text-anchor="middle"
-                  font-size="9"
-                  fill="#7AA89F"
-                  font-weight="600"
-                >
-                  System
-                </text>
-                <text
-                  x="61"
-                  y="168"
-                  text-anchor="middle"
-                  font-size="9"
-                  fill="#7AA89F"
-                  font-weight="600"
-                >
-                  Prompt
-                </text>
-                <rect
-                  x="92"
-                  y="106"
-                  width="110"
-                  height="108"
-                  rx="8"
-                  fill="#A3B5D6"
-                  opacity="0.1"
-                />
-                <rect
-                  x="92"
-                  y="106"
-                  width="110"
-                  height="108"
-                  rx="8"
-                  fill="none"
-                  stroke="#A3B5D6"
-                  stroke-width="1.2"
-                  opacity="0.6"
-                />
-                <text
-                  x="147"
-                  y="158"
-                  text-anchor="middle"
-                  font-size="11"
-                  fill="#A3B5D6"
-                  font-weight="600"
-                >
-                  History
-                </text>
-                <text
-                  x="147"
-                  y="173"
-                  text-anchor="middle"
-                  font-size="8.5"
-                  fill="#A3B5D6"
+                  x="30"
+                  y="62"
+                  width="140"
+                  height="4"
+                  rx="2"
+                  fill="#FF8DD7"
                   opacity="0.7"
-                >
-                  previous messages
-                </text>
-                <rect
-                  x="208"
-                  y="106"
-                  width="110"
-                  height="108"
-                  rx="8"
-                  fill="#7FB4CA"
-                  opacity="0.1"
                 />
-                <rect
-                  x="208"
-                  y="106"
-                  width="110"
-                  height="108"
-                  rx="8"
+                <ellipse
+                  cx="100"
+                  cy="97"
+                  rx="18"
+                  ry="7"
                   fill="none"
-                  stroke="#7FB4CA"
-                  stroke-width="1.2"
-                  opacity="0.6"
-                />
-                <text
-                  x="263"
-                  y="155"
-                  text-anchor="middle"
-                  font-size="11"
-                  fill="#7FB4CA"
-                  font-weight="600"
-                >
-                  Files
-                </text>
-                <text
-                  x="263"
-                  y="170"
-                  text-anchor="middle"
-                  font-size="11"
-                  fill="#7FB4CA"
-                  font-weight="600"
-                >
-                  read
-                </text>
-                <text
-                  x="263"
-                  y="183"
-                  text-anchor="middle"
-                  font-size="8.5"
-                  fill="#7FB4CA"
-                  opacity="0.7"
-                >
-                  code, docs
-                </text>
-                <rect
-                  x="324"
-                  y="106"
-                  width="56"
-                  height="108"
-                  rx="8"
-                  fill="#B7CC85"
-                  opacity="0.12"
-                />
-                <rect
-                  x="324"
-                  y="106"
-                  width="56"
-                  height="108"
-                  rx="8"
-                  fill="none"
-                  stroke="#B7CC85"
-                  stroke-width="1.2"
-                  opacity="0.6"
-                />
-                <text
-                  x="352"
-                  y="152"
-                  text-anchor="middle"
-                  font-size="9.5"
-                  fill="#B7CC85"
-                  font-weight="600"
-                >
-                  Your
-                </text>
-                <text
-                  x="352"
-                  y="165"
-                  text-anchor="middle"
-                  font-size="9.5"
-                  fill="#B7CC85"
-                  font-weight="600"
-                >
-                  instruc-
-                </text>
-                <text
-                  x="352"
-                  y="178"
-                  text-anchor="middle"
-                  font-size="9.5"
-                  fill="#B7CC85"
-                  font-weight="600"
-                >
-                  tion
-                </text>
-                <rect
-                  x="386"
-                  y="106"
-                  width="98"
-                  height="108"
-                  rx="8"
-                  fill="none"
-                  stroke="#8394A3"
-                  stroke-width="1"
-                  stroke-dasharray="5,4"
-                  opacity="0.6"
-                />
-                <text
-                  x="435"
-                  y="156"
-                  text-anchor="middle"
-                  font-size="10"
-                  fill="#8394A3"
-                >
-                  Free
-                </text>
-                <text
-                  x="435"
-                  y="170"
-                  text-anchor="middle"
-                  font-size="10"
-                  fill="#8394A3"
-                >
-                  space
-                </text>
-                <line
-                  x1="30"
-                  y1="240"
-                  x2="210"
-                  y2="240"
-                  stroke="#E0C15A"
-                  stroke-width="1.2"
-                />
-                <line
-                  x1="310"
-                  y1="240"
-                  x2="490"
-                  y2="240"
-                  stroke="#E0C15A"
-                  stroke-width="1.2"
-                />
-                <line
-                  x1="30"
-                  y1="236"
-                  x2="30"
-                  y2="244"
-                  stroke="#E0C15A"
-                  stroke-width="1.2"
-                />
-                <line
-                  x1="490"
-                  y1="236"
-                  x2="490"
-                  y2="244"
-                  stroke="#E0C15A"
-                  stroke-width="1.2"
-                />
-                <rect
-                  x="213"
-                  y="230"
-                  width="94"
-                  height="20"
-                  rx="10"
-                  fill="#E0C15A"
-                  opacity="0.12"
-                />
-                <text
-                  x="260"
-                  y="244"
-                  text-anchor="middle"
-                  font-size="11"
-                  fill="#E0C15A"
-                  font-weight="700"
-                  filter="url(#s3-glow)"
-                >
-                  128K tokens
-                </text>
-                <text
-                  x="260"
-                  y="290"
-                  text-anchor="middle"
-                  font-size="10"
-                  fill="#A1AABB"
-                >
-                  Each token that enters displaces available space.
-                </text>
-                <text
-                  x="260"
-                  y="310"
-                  text-anchor="middle"
-                  font-size="10"
-                  fill="#A1AABB"
-                >
-                  When it fills up,
-                  <tspan fill="#CB7C94" font-weight="600">
-                    the model loses old context.
-                  </tspan>
-                </text>
-                <g transform="translate(260, 94)">
-                  <line
-                    x1="-180"
-                    y1="0"
-                    x2="180"
-                    y2="0"
-                    stroke="#313342"
-                    stroke-width="0.8"
-                  />
-                  <polygon points="180,0 174,-3 174,3" fill="#313342" />
-                </g>
-              </svg>
-            </figure>
-          </article>
-
-<article
-            class="slide"
-            data-index="4"
-            data-module="2"
-            data-tone="yellow"
-          >
-            <div class="slide-content">
-              <p class="slide-kicker">05 · Context Window</p>
-              <h2>Compaction</h2>
-              <p>
-                When the board fills up, the system generates a compressed
-                summary and deletes the original messages. You lose variable
-                names, design decisions, user preferences.
-              </p>
-            </div>
-            <figure class="slide-figure">
-              <svg
-                viewBox="0 0 520 360"
-                xmlns="http://www.w3.org/2000/svg"
-                font-family="Space Grotesk,sans-serif"
-                role="img"
-                aria-label="Secuencia de compactacion y perdida"
-              >
-                <defs>
-                  <filter
-                    id="s5-glow"
-                    x="-10%"
-                    y="-10%"
-                    width="120%"
-                    height="120%"
-                  >
-                    <feGaussianBlur stdDeviation="2" result="blur" />
-                    <feComposite
-                      in="SourceGraphic"
-                      in2="blur"
-                      operator="over"
-                    />
-                  </filter>
-                  <filter
-                    id="s5-glowR"
-                    x="-30%"
-                    y="-30%"
-                    width="160%"
-                    height="160%"
-                  >
-                    <feGaussianBlur stdDeviation="4" result="blur" />
-                    <feMerge>
-                      <feMergeNode in="blur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                </defs>
-                <text
-                  x="260"
-                  y="30"
-                  text-anchor="middle"
-                  font-size="10"
-                  letter-spacing="2"
-                  fill="#A1AABB"
-                >
-                  FORCED AMNESIA
-                </text>
-                <!-- LEFT: Antes -->
-                <text
-                  x="90"
-                  y="68"
-                  text-anchor="middle"
-                  font-size="9"
-                  letter-spacing="2"
-                  fill="#A1AABB"
-                >
-                  BEFORE
-                </text>
-                <rect
-                  x="20"
-                  y="82"
-                  width="140"
-                  height="38"
-                  rx="10"
-                  fill="#1c212c"
-                  stroke="#7FB4CA"
-                  stroke-width="1.2"
-                  filter="url(#s5-glow)"
-                />
-                <text x="46" y="98" font-size="8" fill="#A1AABB">
-                  Arquitecyoura
-                </text>
-                <text
-                  x="46"
-                  y="110"
-                  font-size="11"
-                  fill="#F3F6F9"
-                  font-weight="700"
-                >
-                  Usar Clean Arch
-                </text>
-                <rect
-                  x="20"
-                  y="128"
-                  width="140"
-                  height="38"
-                  rx="10"
-                  fill="#1c212c"
-                  stroke="#A3B5D6"
-                  stroke-width="1.2"
-                />
-                <text x="46" y="144" font-size="8" fill="#A1AABB">
-                  Variable
-                </text>
-                <text
-                  x="46"
-                  y="156"
-                  font-size="11"
-                  fill="#F3F6F9"
-                  font-weight="700"
-                >
-                  userRepo
-                </text>
-                <rect
-                  x="20"
-                  y="174"
-                  width="140"
-                  height="38"
-                  rx="10"
-                  fill="#1c212c"
-                  stroke="#7FB4CA"
-                  stroke-width="1.2"
-                />
-                <text x="46" y="190" font-size="8" fill="#A1AABB">Patron</text>
-                <text
-                  x="46"
-                  y="202"
-                  font-size="11"
-                  fill="#F3F6F9"
-                  font-weight="700"
-                >
-                  Inyeccion de Dep.
-                </text>
-                <rect
-                  x="20"
-                  y="220"
-                  width="140"
-                  height="38"
-                  rx="10"
-                  fill="#1c212c"
-                  stroke="#A3B5D6"
-                  stroke-width="1.2"
-                />
-                <text x="46" y="236" font-size="8" fill="#A1AABB">
-                  Preference
-                </text>
-                <text
-                  x="46"
-                  y="248"
-                  font-size="11"
-                  fill="#F3F6F9"
-                  font-weight="700"
-                >
-                  Tabs, no spaces
-                </text>
-                <rect
-                  x="20"
-                  y="266"
-                  width="140"
-                  height="38"
-                  rx="10"
-                  fill="#1c212c"
-                  stroke="#7FB4CA"
-                  stroke-width="1.2"
-                />
-                <text x="46" y="282" font-size="8" fill="#A1AABB">
-                  Convencion
-                </text>
-                <text
-                  x="46"
-                  y="294"
-                  font-size="11"
-                  fill="#F3F6F9"
-                  font-weight="700"
-                >
-                  camelCase strict
-                </text>
-                <!-- CENTER: Funnel -->
-                <text
-                  x="260"
-                  y="80"
-                  text-anchor="middle"
-                  font-size="9"
-                  letter-spacing="1.5"
-                  fill="#CB7C94"
-                  font-weight="600"
-                >
-                  COMPACTION
-                </text>
-                <polygon
-                  points="195,88 325,88 290,272 230,272"
-                  fill="#232A36"
-                  stroke="#CB7C94"
+                  stroke="#FF8DD7"
                   stroke-width="1.5"
-                  opacity="0.6"
-                />
-                <g filter="url(#s5-glowR)" transform="translate(260,165)">
-                  <polygon
-                    points="-4,-22 6,-4 0,-4 4,22 -6,4 0,4"
-                    fill="#DFBD76"
-                    opacity="0.9"
-                  />
-                </g>
-                <line
-                  x1="260"
-                  y1="275"
-                  x2="260"
-                  y2="295"
-                  stroke="#CB7C94"
-                  stroke-width="1.5"
-                  stroke-dasharray="3,2"
-                />
-                <polygon points="254,293 260,302 266,293" fill="#CB7C94" />
-                <!-- RIGHT: Despues -->
-                <text
-                  x="420"
-                  y="68"
-                  text-anchor="middle"
-                  font-size="9"
-                  letter-spacing="2"
-                  fill="#A1AABB"
-                >
-                  AFTER
-                </text>
-                <rect
-                  x="345"
-                  y="105"
-                  width="150"
-                  height="155"
-                  rx="12"
-                  fill="#1c212c"
-                  stroke="#313342"
-                  stroke-width="1"
-                  stroke-dasharray="4,3"
-                />
-                <text
-                  x="420"
-                  y="128"
-                  text-anchor="middle"
-                  font-size="11"
-                  fill="#8394A3"
-                  font-weight="600"
-                >
-                  Generic summary
-                </text>
-                <line
-                  x1="360"
-                  y1="136"
-                  x2="480"
-                  y2="136"
-                  stroke="#313342"
-                  stroke-width="0.5"
-                />
-                <g opacity="0.3">
-                  <text x="365" y="156" font-size="9" fill="#8394A3">
-                    Arquitecyoura: ???
-                  </text>
-                  <line
-                    x1="362"
-                    y1="153"
-                    x2="462"
-                    y2="153"
-                    stroke="#CB7C94"
-                    stroke-width="0.8"
-                  />
-                </g>
-                <g opacity="0.25">
-                  <text x="365" y="175" font-size="9" fill="#8394A3">
-                    Variable: ———
-                  </text>
-                  <line
-                    x1="362"
-                    y1="172"
-                    x2="450"
-                    y2="172"
-                    stroke="#CB7C94"
-                    stroke-width="0.8"
-                  />
-                </g>
-                <g opacity="0.2">
-                  <text x="365" y="194" font-size="9" fill="#8394A3">
-                    Pattern: ———
-                  </text>
-                  <line
-                    x1="362"
-                    y1="191"
-                    x2="440"
-                    y2="191"
-                    stroke="#CB7C94"
-                    stroke-width="0.8"
-                  />
-                </g>
-                <g opacity="0.15">
-                  <text x="365" y="213" font-size="9" fill="#8394A3">
-                    Preference: ———
-                  </text>
-                  <line
-                    x1="362"
-                    y1="210"
-                    x2="460"
-                    y2="210"
-                    stroke="#CB7C94"
-                    stroke-width="0.8"
-                  />
-                </g>
-                <rect
-                  x="370"
-                  y="280"
-                  width="96"
-                  height="24"
-                  rx="12"
-                  fill="#CB7C94"
-                  fill-opacity="0.12"
-                  stroke="#CB7C94"
-                  stroke-width="0.8"
-                />
-                <text
-                  x="420"
-                  y="296"
-                  text-anchor="middle"
-                  font-size="9"
-                  fill="#CB7C94"
-                  font-weight="600"
-                >
-                  Context lost
-                </text>
-                <!-- Bottom counts -->
-                <text
-                  x="90"
-                  y="336"
-                  text-anchor="middle"
-                  font-size="20"
-                  fill="#7FB4CA"
-                  font-weight="700"
-                >
-                  5
-                </text>
-                <text
-                  x="90"
-                  y="350"
-                  text-anchor="middle"
-                  font-size="8"
-                  fill="#A1AABB"
-                >
-                  decisions
-                </text>
-                <text
-                  x="260"
-                  y="338"
-                  text-anchor="middle"
-                  font-size="14"
-                  fill="#CB7C94"
-                >
-                  →
-                </text>
-                <text
-                  x="420"
-                  y="336"
-                  text-anchor="middle"
-                  font-size="20"
-                  fill="#CB7C94"
-                  font-weight="700"
-                >
-                  1
-                </text>
-                <text
-                  x="420"
-                  y="350"
-                  text-anchor="middle"
-                  font-size="8"
-                  fill="#A1AABB"
-                >
-                  vague summary
-                </text>
-              </svg>
-            </figure>
-          </article>
-<article
-            class="slide"
-            data-index="5"
-            data-module="3"
-            data-tone="purple"
-          >
-            <div class="slide-content">
-              <p class="slide-kicker">06 · 1st Context Evolution</p>
-              <h2>The first idea</h2>
-              <p>
-                A giant markdown file with ALL the project
-                rules. Style, patterns, anti-patterns, conventions,
-                workflows. The agent read it at the start and "knew" how to
-                work.
-              </p>
-            </div>
-            <figure class="slide-figure">
-              <svg
-                viewBox="0 0 520 360"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                font-family="Space Grotesk,sans-serif"
-                role="img"
-                aria-label="AGENTS.md how archivo monolitico"
-              >
-                <defs>
-                  <filter
-                    id="s10-glow"
-                    x="-20%"
-                    y="-20%"
-                    width="140%"
-                    height="140%"
-                  >
-                    <feGaussianBlur stdDeviation="6" result="blur" />
-                    <feFlood flood-color="#A3B5D6" flood-opacity="0.15" />
-                    <feComposite in2="blur" operator="in" />
-                    <feMerge>
-                      <feMergeNode />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                </defs>
-                <text
-                  x="260"
-                  y="28"
-                  text-anchor="middle"
-                  font-size="10"
-                  letter-spacing="2"
-                  fill="#A1AABB"
-                >
-                  It all started with AGENTS.md
-                </text>
-                <g filter="url(#s10-glow)" transform="translate(165, 62)">
-                  <rect
-                    x="0"
-                    y="0"
-                    width="180"
-                    height="218"
-                    rx="10"
-                    fill="#1c212c"
-                    stroke="#A3B5D6"
-                    stroke-width="1.5"
-                  />
-                  <text
-                    x="18"
-                    y="44"
-                    font-size="13"
-                    fill="#A3B5D6"
-                    font-weight="700"
-                  >
-                    AGENTS.md
-                  </text>
-                  <rect x="18" y="50" width="144" height="1" fill="#313342" />
-                  <rect
-                    x="18"
-                    y="60"
-                    width="8"
-                    height="8"
-                    rx="2"
-                    fill="#7FB4CA"
-                    opacity="0.7"
-                  />
-                  <text
-                    x="32"
-                    y="68"
-                    font-size="9.5"
-                    fill="#F3F6F9"
-                    opacity="0.9"
-                  >
-                    Styles
-                  </text>
-                  <rect
-                    x="18"
-                    y="78"
-                    width="8"
-                    height="8"
-                    rx="2"
-                    fill="#B7CC85"
-                    opacity="0.7"
-                  />
-                  <text
-                    x="32"
-                    y="86"
-                    font-size="9.5"
-                    fill="#F3F6F9"
-                    opacity="0.9"
-                  >
-                    Patterns
-                  </text>
-                  <rect
-                    x="18"
-                    y="96"
-                    width="8"
-                    height="8"
-                    rx="2"
-                    fill="#CB7C94"
-                    opacity="0.7"
-                  />
-                  <text
-                    x="32"
-                    y="104"
-                    font-size="9.5"
-                    fill="#F3F6F9"
-                    opacity="0.9"
-                  >
-                    Anti-patterns
-                  </text>
-                  <rect
-                    x="18"
-                    y="114"
-                    width="8"
-                    height="8"
-                    rx="2"
-                    fill="#DFBD76"
-                    opacity="0.7"
-                  />
-                  <text
-                    x="32"
-                    y="122"
-                    font-size="9.5"
-                    fill="#F3F6F9"
-                    opacity="0.9"
-                  >
-                    Conventions
-                  </text>
-                  <rect
-                    x="18"
-                    y="132"
-                    width="8"
-                    height="8"
-                    rx="2"
-                    fill="#DEBA87"
-                    opacity="0.7"
-                  />
-                  <text
-                    x="32"
-                    y="140"
-                    font-size="9.5"
-                    fill="#F3F6F9"
-                    opacity="0.9"
-                  >
-                    Workflows
-                  </text>
-                  <rect
-                    x="18"
-                    y="150"
-                    width="8"
-                    height="8"
-                    rx="2"
-                    fill="#7AA89F"
-                    opacity="0.7"
-                  />
-                  <text
-                    x="32"
-                    y="158"
-                    font-size="9.5"
-                    fill="#F3F6F9"
-                    opacity="0.9"
-                  >
-                    Testing rules
-                  </text>
-                  <rect
-                    x="18"
-                    y="168"
-                    width="8"
-                    height="8"
-                    rx="2"
-                    fill="#FF8DD7"
-                    opacity="0.7"
-                  />
-                  <text
-                    x="32"
-                    y="176"
-                    font-size="9.5"
-                    fill="#F3F6F9"
-                    opacity="0.9"
-                  >
-                    Architecture
-                  </text>
-                  <rect
-                    x="18"
-                    y="188"
-                    width="100"
-                    height="2"
-                    rx="1"
-                    fill="#313342"
-                    opacity="0.5"
-                  />
-                  <rect
-                    x="18"
-                    y="194"
-                    width="75"
-                    height="2"
-                    rx="1"
-                    fill="#313342"
-                    opacity="0.35"
-                  />
-                  <rect
-                    x="18"
-                    y="200"
-                    width="120"
-                    height="2"
-                    rx="1"
-                    fill="#313342"
-                    opacity="0.2"
-                  />
-                </g>
-                <g transform="translate(374, 115)" opacity="0.7">
-                  <text
-                    x="0"
-                    y="0"
-                    font-size="10"
-                    fill="#A1AABB"
-                    letter-spacing="1"
-                    font-weight="600"
-                  >
-                    +2400
-                  </text>
-                  <text x="0" y="14" font-size="9" fill="#A1AABB">LINES</text>
-                </g>
-                <path
-                  d="M255 300 L255 314"
-                  stroke="#8394A3"
-                  stroke-width="1.2"
+                  filter="url(#s41-glow)"
                 />
                 <path
-                  d="M250 310 L255 317 L260 310"
+                  d="M82 97 v18 c0 3.9 8 7 18 7 s18-3.1 18-7 v-18"
                   fill="none"
-                  stroke="#8394A3"
-                  stroke-width="1.2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <rect
-                  x="225"
-                  y="318"
-                  width="60"
-                  height="26"
-                  rx="13"
-                  fill="#1c212c"
-                  stroke="#7FB4CA"
-                  stroke-width="1"
-                />
-                <text
-                  x="257"
-                  y="335"
-                  text-anchor="middle"
-                  font-size="8"
-                  fill="#7FB4CA"
-                  font-weight="500"
-                >
-                  AGENT
-                </text>
-                <text
-                  x="260"
-                  y="293"
-                  text-anchor="middle"
-                  font-size="9.5"
-                  fill="#A1AABB"
-                  font-style="italic"
-                >
-                  One File - All the knowledge
-                </text>
-              </svg>
-            </figure>
-          </article>
-<article
-            class="slide"
-            data-index="6"
-            data-module="3"
-            data-tone="purple"
-          >
-            <div class="slide-content">
-              <p class="slide-kicker">07 · 1st Context Evolution</p>
-              <h2>AGENTS.md grows infinitely</h2>
-              <p>
-                Each new convention bloated the file. In real projects it can
-                reach thousands of lines. It eats up the context window before
-                you write your first prompt.
-              </p>
-            </div>
-            <figure class="slide-figure">
-              <svg
-                viewBox="0 0 520 360"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                font-family="Space Grotesk,sans-serif"
-                role="img"
-                aria-label="Crecimiento descontrolado de AGENTS.md"
-              >
-                <defs>
-                  <linearGradient id="s11-ctxG" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stop-color="#CB7C94" />
-                    <stop offset="70%" stop-color="#CB7C94" />
-                    <stop offset="100%" stop-color="#FF8DD7" />
-                  </linearGradient>
-                </defs>
-                <text
-                  x="260"
-                  y="24"
-                  text-anchor="middle"
-                  font-size="14"
-                  font-weight="700"
-                  fill="#F3F6F9"
-                >
-                  AGENTS.md grows infinitely
-                </text>
-                <text
-                  x="260"
-                  y="40"
-                  text-anchor="middle"
-                  font-size="9"
-                  fill="#8394A3"
-                >
-                  Each new convention bloats the file
-                </text>
-                <g transform="translate(75, 128)">
-                  <path
-                    d="M0,6 Q0,0 6,0 L48,0 L62,14 L62,90 Q62,96 56,96 L6,96 Q0,96 0,90Z"
-                    fill="#1c212c"
-                    stroke="#B7CC85"
-                    stroke-width="1.5"
-                  />
-                  <g stroke="#313342" stroke-width="1.1">
-                    <line x1="10" y1="24" x2="38" y2="24" />
-                    <line x1="10" y1="30" x2="44" y2="30" />
-                    <line x1="10" y1="36" x2="32" y2="36" />
-                    <line x1="10" y1="42" x2="40" y2="42" />
-                    <line x1="10" y1="48" x2="28" y2="48" />
-                    <line x1="10" y1="54" x2="46" y2="54" />
-                  </g>
-                  <text
-                    x="31"
-                    y="82"
-                    text-anchor="middle"
-                    font-size="8"
-                    fill="#B7CC85"
-                    font-weight="600"
-                  >
-                    200 lines
-                  </text>
-                </g>
-                <text
-                  x="106"
-                  y="240"
-                  text-anchor="middle"
-                  font-size="7.5"
-                  fill="#A1AABB"
-                >
-                  Manageable
-                </text>
-                <g opacity="0.5">
-                  <line
-                    x1="149"
-                    y1="178"
-                    x2="179"
-                    y2="178"
-                    stroke="#8394A3"
-                    stroke-width="1"
-                    stroke-dasharray="3,2"
-                  />
-                  <polygon points="179,175 185,178 179,181" fill="#8394A3" />
-                </g>
-                <g transform="translate(197, 98)">
-                  <path
-                    d="M0,6 Q0,0 6,0 L58,0 L76,18 L76,118 Q76,124 70,124 L6,124 Q0,124 0,118Z"
-                    fill="#1c212c"
-                    stroke="#DFBD76"
-                    stroke-width="1.5"
-                  />
-                  <g stroke="#313342" stroke-width="1">
-                    <line x1="10" y1="28" x2="48" y2="28" />
-                    <line x1="10" y1="34" x2="56" y2="34" />
-                    <line x1="10" y1="40" x2="42" y2="40" />
-                    <line x1="10" y1="46" x2="52" y2="46" />
-                    <line x1="10" y1="52" x2="46" y2="52" />
-                    <line x1="10" y1="58" x2="58" y2="58" />
-                    <line x1="10" y1="64" x2="38" y2="64" />
-                    <line x1="10" y1="70" x2="50" y2="70" />
-                    <line x1="10" y1="76" x2="44" y2="76" />
-                    <line x1="10" y1="82" x2="54" y2="82" />
-                  </g>
-                  <text
-                    x="38"
-                    y="114"
-                    text-anchor="middle"
-                    font-size="8.5"
-                    fill="#DFBD76"
-                    font-weight="600"
-                  >
-                    800 lines
-                  </text>
-                </g>
-                <text
-                  x="235"
-                  y="240"
-                  text-anchor="middle"
-                  font-size="7.5"
-                  fill="#A1AABB"
-                >
-                  Noisy
-                </text>
-                <g opacity="0.5">
-                  <line
-                    x1="285"
-                    y1="178"
-                    x2="315"
-                    y2="178"
-                    stroke="#8394A3"
-                    stroke-width="1"
-                    stroke-dasharray="3,2"
-                  />
-                  <polygon points="315,175 321,178 315,181" fill="#8394A3" />
-                </g>
-                <g transform="translate(333, 56)">
-                  <path
-                    d="M0,6 Q0,0 6,0 L72,0 L96,22 L96,160 Q96,166 90,166 L6,166 Q0,166 0,160Z"
-                    fill="#CB7C94"
-                    fill-opacity="0.04"
-                    stroke="#CB7C94"
-                    stroke-width="1.5"
-                  />
-                  <g stroke="#313342" stroke-width="1">
-                    <line x1="12" y1="32" x2="60" y2="32" />
-                    <line x1="12" y1="37" x2="76" y2="37" />
-                    <line x1="12" y1="42" x2="50" y2="42" />
-                    <line x1="12" y1="47" x2="68" y2="47" />
-                    <line x1="12" y1="52" x2="44" y2="52" />
-                    <line x1="12" y1="57" x2="78" y2="57" />
-                    <line x1="12" y1="62" x2="56" y2="62" />
-                    <line x1="12" y1="67" x2="66" y2="67" />
-                    <line x1="12" y1="72" x2="48" y2="72" />
-                    <line x1="12" y1="77" x2="72" y2="77" />
-                    <line x1="12" y1="82" x2="40" y2="82" />
-                    <line x1="12" y1="87" x2="64" y2="87" />
-                    <line x1="12" y1="92" x2="74" y2="92" />
-                    <line x1="12" y1="97" x2="52" y2="97" />
-                    <line x1="12" y1="102" x2="66" y2="102" />
-                    <line x1="12" y1="107" x2="38" y2="107" />
-                    <line x1="12" y1="112" x2="70" y2="112" />
-                    <line x1="12" y1="117" x2="58" y2="117" />
-                    <line x1="12" y1="122" x2="78" y2="122" />
-                    <line x1="12" y1="127" x2="46" y2="127" />
-                  </g>
-                  <text
-                    x="48"
-                    y="156"
-                    text-anchor="middle"
-                    font-size="10"
-                    fill="#CB7C94"
-                    font-weight="700"
-                  >
-                    3000+ lines
-                  </text>
-                </g>
-                <text
-                  x="381"
-                  y="240"
-                  text-anchor="middle"
-                  font-size="7.5"
-                  fill="#CB7C94"
-                  opacity="0.8"
-                >
-                  Unmanageable
-                </text>
-                <text x="160" y="270" font-size="9" fill="#A1AABB">
-                  Context window
-                </text>
-                <rect
-                  x="32"
-                  y="278"
-                  width="456"
-                  height="20"
-                  rx="4"
-                  fill="#1c212c"
-                  stroke="#313342"
-                  stroke-width="1"
-                />
-                <rect
-                  x="32"
-                  y="278"
-                  width="388"
-                  height="20"
-                  rx="4"
-                  fill="url(#s11-ctxG)"
-                  opacity="0.85"
-                />
-                <text
-                  x="220"
-                  y="292"
-                  text-anchor="middle"
-                  font-size="9"
-                  fill="#F3F6F9"
-                  font-weight="700"
-                  opacity="0.9"
-                >
-                  AGENTS.md — 85% consumed
-                </text>
-                <text
-                  x="420"
-                  y="324"
-                  text-anchor="middle"
-                  font-size="8.5"
-                  fill="#8394A3"
-                  font-style="italic"
-                >
-                  Your prompt here?
-                </text>
-              </svg>
-            </figure>
-          </article>
-<article
-            class="slide"
-            data-index="7"
-            data-module="3"
-            data-tone="purple"
-          >
-            <div class="slide-content">
-              <p class="slide-kicker">08 · 1st Context Evolution</p>
-              <h2>First evolution: Skills</h2>
-              <p>
-                Instead of a giant file, a router (lightweight AGENTS.md) that
-                points to specific SKILL.md files. Only loads the context you
-                need for the current task. Dynamic context on demand.
-              </p>
-            </div>
-            <figure class="slide-figure">
-              <svg
-                viewBox="0 0 520 360"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                font-family="Space Grotesk,sans-serif"
-                role="img"
-                aria-label="De monolito a router con skills"
-              >
-                <defs>
-                  <filter id="s12-glow">
-                    <feGaussianBlur stdDeviation="6" result="blur" />
-                    <feComposite
-                      in="SourceGraphic"
-                      in2="blur"
-                      operator="over"
-                    />
-                  </filter>
-                </defs>
-                <text
-                  x="260"
-                  y="32"
-                  text-anchor="middle"
-                  fill="#F3F6F9"
-                  font-size="15"
-                  font-weight="600"
-                >
-                  First evolution: Skills
-                </text>
-                <line
-                  x1="170"
-                  y1="42"
-                  x2="350"
-                  y2="42"
-                  stroke="#313342"
-                  stroke-width="1"
-                />
-                <rect
-                  x="36"
-                  y="120"
-                  width="130"
-                  height="88"
-                  rx="10"
-                  fill="#1c212c"
-                  stroke="#7AA89F"
+                  stroke="#FF8DD7"
                   stroke-width="1.5"
                 />
                 <text
-                  x="101"
-                  y="152"
-                  text-anchor="middle"
-                  fill="#F3F6F9"
-                  font-size="11.5"
-                  font-weight="600"
-                >
-                  AGENTS.md
-                </text>
-                <text
-                  x="101"
-                  y="170"
-                  text-anchor="middle"
-                  fill="#7AA89F"
-                  font-size="9"
-                >
-                  router
-                </text>
-                <text
-                  x="101"
-                  y="188"
-                  text-anchor="middle"
-                  fill="#8394A3"
-                  font-size="8.5"
-                  font-style="italic"
-                >
-                  lightweight
-                </text>
-                <line
-                  x1="166"
-                  y1="145"
-                  x2="302"
-                  y2="98"
-                  stroke="#7FB4CA"
-                  stroke-width="1.5"
-                  opacity="0.9"
-                />
-                <line
-                  x1="166"
-                  y1="158"
-                  x2="302"
-                  y2="163"
-                  stroke="#313342"
-                  stroke-width="1"
-                  stroke-dasharray="3 4"
-                  opacity="0.3"
-                />
-                <line
-                  x1="166"
-                  y1="170"
-                  x2="302"
-                  y2="228"
-                  stroke="#313342"
-                  stroke-width="1"
-                  stroke-dasharray="3 4"
-                  opacity="0.3"
-                />
-                <line
-                  x1="166"
-                  y1="180"
-                  x2="302"
-                  y2="293"
-                  stroke="#313342"
-                  stroke-width="1"
-                  stroke-dasharray="3 4"
-                  opacity="0.3"
-                />
-                <rect
-                  x="306"
-                  y="72"
-                  width="160"
-                  height="52"
-                  rx="8"
-                  fill="#232A36"
-                  stroke="#7FB4CA"
-                  stroke-width="1.8"
-                  filter="url(#s12-glow)"
-                />
-                <circle cx="324" cy="98" r="5" fill="#7FB4CA" opacity="0.85" />
-                <text
-                  x="338"
-                  y="95"
-                  fill="#F3F6F9"
-                  font-size="11.5"
-                  font-weight="600"
-                >
-                  react-19
-                </text>
-                <text x="338" y="109" fill="#7FB4CA" font-size="8.5">
-                  SKILL.md
-                </text>
-                <rect
-                  x="420"
-                  y="82"
-                  width="38"
-                  height="16"
-                  rx="8"
-                  fill="#7FB4CA"
-                  opacity="0.15"
-                />
-                <text
-                  x="439"
-                  y="93"
-                  text-anchor="middle"
-                  fill="#7FB4CA"
-                  font-size="7.5"
-                  font-weight="600"
-                >
-                  active
-                </text>
-                <rect
-                  x="306"
+                  x="100"
                   y="140"
-                  width="160"
-                  height="48"
-                  rx="8"
-                  fill="#1c212c"
-                  stroke="#313342"
-                  stroke-width="1"
-                  opacity="0.5"
-                />
-                <text
-                  x="338"
-                  y="161"
-                  fill="#A1AABB"
-                  font-size="11"
-                  opacity="0.5"
-                >
-                  typescript
-                </text>
-                <text
-                  x="338"
-                  y="174"
-                  fill="#8394A3"
-                  font-size="8"
-                  opacity="0.4"
-                >
-                  SKILL.md
-                </text>
-                <rect
-                  x="306"
-                  y="205"
-                  width="160"
-                  height="48"
-                  rx="8"
-                  fill="#1c212c"
-                  stroke="#313342"
-                  stroke-width="1"
-                  opacity="0.5"
-                />
-                <text
-                  x="338"
-                  y="226"
-                  fill="#A1AABB"
-                  font-size="11"
-                  opacity="0.5"
-                >
-                  testing
-                </text>
-                <text
-                  x="338"
-                  y="239"
-                  fill="#8394A3"
-                  font-size="8"
-                  opacity="0.4"
-                >
-                  SKILL.md
-                </text>
-                <rect
-                  x="306"
-                  y="270"
-                  width="160"
-                  height="48"
-                  rx="8"
-                  fill="#1c212c"
-                  stroke="#313342"
-                  stroke-width="1"
-                  opacity="0.5"
-                />
-                <text
-                  x="338"
-                  y="291"
-                  fill="#A1AABB"
-                  font-size="11"
-                  opacity="0.5"
-                >
-                  django-drf
-                </text>
-                <text
-                  x="338"
-                  y="304"
-                  fill="#8394A3"
-                  font-size="8"
-                  opacity="0.4"
-                >
-                  SKILL.md
-                </text>
-                <text x="36" y="248" fill="#A1AABB" font-size="9.5">
-                  Router
-                </text>
-                <text x="78" y="248" fill="#8394A3" font-size="9.5">→</text>
-                <text
-                  x="92"
-                  y="248"
-                  fill="#7FB4CA"
-                  font-size="9.5"
-                  font-weight="500"
-                >
-                  Active skill
-                </text>
-                <text
-                  x="36"
-                  y="264"
-                  fill="#8394A3"
-                  font-size="8"
-                  font-style="italic"
-                >
-                  Loading only what's needed
-                </text>
-                <line
-                  x1="60"
-                  y1="330"
-                  x2="460"
-                  y2="330"
-                  stroke="#313342"
-                  stroke-width="0.5"
-                />
-                <rect
-                  x="148"
-                  y="335"
-                  width="224"
-                  height="20"
-                  rx="10"
-                  fill="#232A36"
-                  stroke="#313342"
-                  stroke-width="0.5"
-                />
-                <text
-                  x="260"
-                  y="349"
                   text-anchor="middle"
-                  fill="#E0C15A"
-                  font-size="10"
-                  font-weight="500"
-                  letter-spacing="0.5"
-                >
-                  On-demand context
-                </text>
-              </svg>
-            </figure>
-          </article>
-<article
-            class="slide"
-            data-index="8"
-            data-module="3"
-            data-tone="red"
-          >
-            <div class="slide-content">
-              <p class="slide-kicker">09 · 1st Context Evolution</p>
-              <h2>One agent that does everything: why it degrades</h2>
-              <p>
-                "Analyze, design, test, and implement." Single agent fills its
-                context to 80% before writing the first line of code. It compiles
-                but ignores the decisions from step 1.
-              </p>
-            </div>
-            <figure class="slide-figure">
-              <svg
-                viewBox="0 0 520 360"
-                xmlns="http://www.w3.org/2000/svg"
-                font-family="Space Grotesk,sans-serif"
-              >
-                <defs>
-                  <filter id="s15-glow-red">
-                    <feGaussianBlur stdDeviation="6" result="blur" />
-                    <feComposite
-                      in="SourceGraphic"
-                      in2="blur"
-                      operator="over"
-                    />
-                  </filter>
-                  <filter id="s15-glow-soft">
-                    <feGaussianBlur stdDeviation="3" result="blur" />
-                    <feComposite
-                      in="SourceGraphic"
-                      in2="blur"
-                      operator="over"
-                    />
-                  </filter>
-                  <filter id="s15-blur-text">
-                    <feGaussianBlur stdDeviation="1.2" />
-                  </filter>
-                  <filter id="s15-blur-text-heavy">
-                    <feGaussianBlur stdDeviation="2.2" />
-                  </filter>
-                  <linearGradient id="s15-ctx-grad" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stop-color="#8394A3" stop-opacity="0.4" />
-                    <stop
-                      offset="25%"
-                      stop-color="#8394A3"
-                      stop-opacity="0.6"
-                    />
-                    <stop
-                      offset="50%"
-                      stop-color="#CB7C94"
-                      stop-opacity="0.5"
-                    />
-                    <stop
-                      offset="70%"
-                      stop-color="#CB7C94"
-                      stop-opacity="0.8"
-                    />
-                    <stop offset="80%" stop-color="#CB7C94" />
-                    <stop offset="100%" stop-color="#06080F" stop-opacity="0" />
-                  </linearGradient>
-                  <linearGradient
-                    id="s15-danger-pulse"
-                    x1="0"
-                    y1="0"
-                    x2="1"
-                    y2="1"
-                  >
-                    <stop
-                      offset="0%"
-                      stop-color="#CB7C94"
-                      stop-opacity="0.15"
-                    />
-                    <stop
-                      offset="100%"
-                      stop-color="#CB7C94"
-                      stop-opacity="0.03"
-                    />
-                  </linearGradient>
-                </defs>
-                <text
-                  x="260"
-                  y="34"
-                  text-anchor="middle"
-                  font-size="10"
-                  letter-spacing="2"
-                  fill="#A1AABB"
-                  text-transform="uppercase"
-                >
-                  SINGLE AGENT DEGRADATION
-                </text>
-                <rect
-                  x="90"
-                  y="72"
-                  width="340"
-                  height="190"
-                  rx="14"
-                  fill="url(#s15-danger-pulse)"
-                  stroke="#CB7C94"
-                  stroke-width="1.8"
-                  stroke-opacity="0.7"
-                  filter="url(#s15-glow-red)"
-                />
-                <rect
-                  x="90"
-                  y="72"
-                  width="340"
-                  height="190"
-                  rx="14"
-                  fill="none"
-                  stroke="#CB7C94"
-                  stroke-width="0.5"
-                  stroke-opacity="0.3"
-                  stroke-dasharray="3,3"
-                />
-                <text
-                  x="260"
-                  y="96"
-                  text-anchor="middle"
-                  font-size="13"
+                  fill="#FF8DD7"
+                  font-size="14"
                   font-weight="700"
-                  fill="#CB7C94"
                 >
-                  GOD AGENT
+                  Engram
                 </text>
                 <text
-                  x="260"
-                  y="110"
+                  x="100"
+                  y="160"
                   text-anchor="middle"
-                  font-size="9"
-                  fill="#8394A3"
+                  fill="#A1AABB"
+                  font-size="11"
                 >
-                  single agent → all tasks
+                  Persistent
+                </text>
+                <text
+                  x="100"
+                  y="175"
+                  text-anchor="middle"
+                  fill="#A1AABB"
+                  font-size="11"
+                >
+                  memory
                 </text>
                 <rect
-                  x="108"
-                  y="122"
-                  width="72"
-                  height="24"
-                  rx="6"
-                  fill="#1c212c"
-                  stroke="#8394A3"
-                  stroke-width="0.6"
-                  stroke-opacity="0.5"
+                  x="58"
+                  y="188"
+                  width="84"
+                  height="18"
+                  rx="9"
+                  fill="#FF8DD7"
+                  opacity="0.12"
                 />
                 <text
-                  x="144"
-                  y="138"
+                  x="100"
+                  y="201"
                   text-anchor="middle"
-                  font-size="9"
-                  fill="#8394A3"
-                  filter="url(#s15-blur-text-heavy)"
+                  fill="#FF8DD7"
+                  font-size="10"
+                  font-weight="600"
                 >
-                  Analyze
+                  Continuity
                 </text>
                 <rect
                   x="190"
-                  y="122"
-                  width="68"
-                  height="24"
-                  rx="6"
+                  y="62"
+                  width="140"
+                  height="150"
+                  rx="12"
                   fill="#1c212c"
-                  stroke="#8394A3"
-                  stroke-width="0.6"
-                  stroke-opacity="0.6"
-                />
-                <text
-                  x="224"
-                  y="138"
-                  text-anchor="middle"
-                  font-size="9"
-                  fill="#A1AABB"
-                  filter="url(#s15-blur-text)"
-                >
-                  Design
-                </text>
-                <rect
-                  x="268"
-                  y="122"
-                  width="80"
-                  height="24"
-                  rx="6"
-                  fill="#232A36"
-                  stroke="#CB7C94"
-                  stroke-width="0.8"
-                  stroke-opacity="0.8"
-                />
-                <text
-                  x="308"
-                  y="138"
-                  text-anchor="middle"
-                  font-size="9"
-                  fill="#F3F6F9"
-                >
-                  Implement
-                </text>
-                <rect
-                  x="358"
-                  y="122"
-                  width="60"
-                  height="24"
-                  rx="6"
-                  fill="#1c212c"
-                  stroke="#313342"
-                  stroke-width="0.6"
-                />
-                <text
-                  x="388"
-                  y="138"
-                  text-anchor="middle"
-                  font-size="9"
-                  fill="#313342"
-                >
-                  Review
-                </text>
-                <rect
-                  x="130"
-                  y="152"
-                  width="64"
-                  height="24"
-                  rx="6"
-                  fill="#1c212c"
-                  stroke="#313342"
-                  stroke-width="0.6"
-                />
-                <text
-                  x="162"
-                  y="168"
-                  text-anchor="middle"
-                  font-size="9"
-                  fill="#313342"
-                >
-                  Test
-                </text>
-                <rect
-                  x="204"
-                  y="152"
-                  width="84"
-                  height="24"
-                  rx="6"
-                  fill="#1c212c"
-                  stroke="#313342"
-                  stroke-width="0.6"
-                />
-                <text
-                  x="246"
-                  y="168"
-                  text-anchor="middle"
-                  font-size="9"
-                  fill="#313342"
-                >
-                  Document
-                </text>
-                <rect
-                  x="298"
-                  y="152"
-                  width="74"
-                  height="24"
-                  rx="6"
-                  fill="#1c212c"
-                  stroke="#313342"
-                  stroke-width="0.6"
-                />
-                <text
-                  x="335"
-                  y="168"
-                  text-anchor="middle"
-                  font-size="9"
-                  fill="#313342"
-                >
-                  Refactor
-                </text>
-                <text
-                  x="110"
-                  y="200"
-                  font-size="9"
-                  letter-spacing="1.5"
-                  fill="#A1AABB"
-                  text-transform="uppercase"
-                >
-                  CONTEXT WINDOW
-                </text>
-                <rect
-                  x="108"
-                  y="208"
-                  width="304"
-                  height="18"
-                  rx="4"
-                  fill="#0a0d14"
-                  stroke="#313342"
-                  stroke-width="0.6"
+                  stroke="#7AA89F"
+                  stroke-width="1.5"
                 />
                 <rect
-                  x="108"
-                  y="208"
-                  width="243"
-                  height="18"
-                  rx="4"
-                  fill="url(#s15-ctx-grad)"
+                  x="190"
+                  y="62"
+                  width="140"
+                  height="4"
+                  rx="2"
+                  fill="#7AA89F"
+                  opacity="0.7"
                 />
-                <rect
-                  x="110"
-                  y="210"
-                  width="60"
-                  height="14"
-                  rx="3"
-                  fill="#8394A3"
-                  fill-opacity="0.2"
+                <circle
+                  cx="260"
+                  cy="88"
+                  r="5"
+                  fill="none"
+                  stroke="#7AA89F"
+                  stroke-width="1.5"
+                  filter="url(#s41-glow)"
                 />
-                <text
-                  x="140"
-                  y="220"
-                  text-anchor="middle"
-                  font-size="6.5"
-                  fill="#8394A3"
-                  filter="url(#s15-blur-text-heavy)"
-                >
-                  analysis
-                </text>
-                <rect
-                  x="175"
-                  y="210"
-                  width="55"
-                  height="14"
-                  rx="3"
-                  fill="#CB7C94"
-                  fill-opacity="0.15"
+                <circle
+                  cx="245"
+                  cy="108"
+                  r="5"
+                  fill="none"
+                  stroke="#7AA89F"
+                  stroke-width="1.5"
                 />
-                <text
-                  x="202"
-                  y="220"
-                  text-anchor="middle"
-                  font-size="6.5"
-                  fill="#A1AABB"
-                  filter="url(#s15-blur-text)"
-                >
-                  design
-                </text>
-                <rect
-                  x="235"
-                  y="210"
-                  width="70"
-                  height="14"
-                  rx="3"
-                  fill="#CB7C94"
-                  fill-opacity="0.35"
+                <circle
+                  cx="275"
+                  cy="108"
+                  r="5"
+                  fill="none"
+                  stroke="#7AA89F"
+                  stroke-width="1.5"
                 />
-                <text
-                  x="270"
-                  y="220"
-                  text-anchor="middle"
-                  font-size="6.5"
-                  fill="#F3F6F9"
-                  font-weight="600"
-                >
-                  implement.
-                </text>
+                <circle
+                  cx="260"
+                  cy="122"
+                  r="5"
+                  fill="none"
+                  stroke="#7AA89F"
+                  stroke-width="1.5"
+                />
                 <line
-                  x1="351"
-                  y1="206"
-                  x2="351"
-                  y2="228"
-                  stroke="#CB7C94"
-                  stroke-width="1"
-                  stroke-opacity="0.8"
+                  x1="257"
+                  y1="93"
+                  x2="248"
+                  y2="103"
+                  stroke="#7AA89F"
+                  stroke-width="1.2"
+                />
+                <line
+                  x1="263"
+                  y1="93"
+                  x2="272"
+                  y2="103"
+                  stroke="#7AA89F"
+                  stroke-width="1.2"
+                />
+                <line
+                  x1="248"
+                  y1="113"
+                  x2="257"
+                  y2="118"
+                  stroke="#7AA89F"
+                  stroke-width="1.2"
+                />
+                <line
+                  x1="272"
+                  y1="113"
+                  x2="263"
+                  y2="118"
+                  stroke="#7AA89F"
+                  stroke-width="1.2"
                 />
                 <text
-                  x="356"
-                  y="221"
-                  font-size="7"
-                  fill="#CB7C94"
+                  x="260"
+                  y="140"
+                  text-anchor="middle"
+                  fill="#7AA89F"
+                  font-size="14"
                   font-weight="700"
                 >
-                  80%
-                </text>
-                <rect
-                  x="375"
-                  y="210"
-                  width="33"
-                  height="14"
-                  rx="3"
-                  fill="none"
-                  stroke="#CB7C94"
-                  stroke-width="0.5"
-                  stroke-dasharray="2,2"
-                  stroke-opacity="0.4"
-                />
-                <text
-                  x="392"
-                  y="220"
-                  text-anchor="middle"
-                  font-size="6"
-                  fill="#CB7C94"
-                  fill-opacity="0.5"
-                >
-                  FULL
+                  SDD
                 </text>
                 <text
                   x="260"
-                  y="248"
-                  text-anchor="middle"
-                  font-size="8.5"
-                  fill="#8394A3"
-                  font-style="italic"
-                >
-                  ↑ lost zone
-                </text>
-                <rect
-                  x="60"
-                  y="278"
-                  width="400"
-                  height="40"
-                  rx="10"
-                  fill="#1c212c"
-                  stroke="#CB7C94"
-                  stroke-width="1"
-                  stroke-opacity="0.5"
-                  filter="url(#s15-glow-soft)"
-                />
-                <text x="82" y="303" font-size="16" fill="#CB7C94">⚠</text>
-                <text
-                  x="100"
-                  y="296"
-                  font-size="10"
-                  fill="#F3F6F9"
-                  font-weight="600"
-                >
-                  Step 1 decisions are no longer in context
-                </text>
-                <text x="100" y="310" font-size="8.5" fill="#A1AABB">
-                  Agent hallucinates or contradicts its own analysis → quality
-                  degrades with each step
-                </text>
-                <line
-                  x1="90"
-                  y1="262"
-                  x2="430"
-                  y2="262"
-                  stroke="#313342"
-                  stroke-width="0.5"
-                  stroke-dasharray="4,4"
-                />
-                <circle
-                  cx="90"
-                  cy="72"
-                  r="2"
-                  fill="#CB7C94"
-                  fill-opacity="0.5"
-                />
-                <circle
-                  cx="430"
-                  cy="72"
-                  r="2"
-                  fill="#CB7C94"
-                  fill-opacity="0.5"
-                />
-                <circle
-                  cx="90"
-                  cy="262"
-                  r="2"
-                  fill="#CB7C94"
-                  fill-opacity="0.5"
-                />
-                <circle
-                  cx="430"
-                  cy="262"
-                  r="2"
-                  fill="#CB7C94"
-                  fill-opacity="0.5"
-                />
-              </svg>
-            </figure>
-          </article>
-<article
-            class="slide"
-            data-index="9"
-            data-module="4"
-            data-tone="purple"
-          >
-            <div class="slide-content">
-              <p class="slide-kicker">10 · 2nd Context Evolution</p>
-              <h2>Second evolution: sub-agents</h2>
-              <p>
-                Skills resolve WHAT context to load. But a single agent still
-                accumulates noise. The solution: delegate each phase to an
-                ephemeral sub-agent with fresh context. It spawns, executes,
-                reports, and dies.
-              </p>
-              <hr style="opacity: 0"/>
-              <p>
-                The orchestrator doesn't work: it coordinates. Delegates each
-                task to a specialized sub-agent that receives only what it needs.
-                Maximum precision, zero accumulated noise.
-              </p>
-            </div>
-            <figure class="slide-figure">
-              <svg
-                viewBox="0 0 520 360"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                font-family="Space Grotesk,sans-serif"
-                role="img"
-                aria-label="De un agente a multiples sub-agentes"
-              >
-                <defs>
-                  <linearGradient id="s13-line" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#E0C15A" stop-opacity="0.6" />
-                    <stop
-                      offset="100%"
-                      stop-color="#313342"
-                      stop-opacity="0.1"
-                    />
-                  </linearGradient>
-                </defs>
-                <text
-                  x="260"
-                  y="28"
-                  text-anchor="middle"
-                  fill="#F3F6F9"
-                  font-size="14.5"
-                  font-weight="600"
-                >
-                  Divide and Conquer
-                </text>
-                <text
-                  x="260"
-                  y="46"
+                  y="160"
                   text-anchor="middle"
                   fill="#A1AABB"
-                  font-size="9"
+                  font-size="11"
                 >
-                  Delegate each phase to an ephemeral agent with fresh context
+                  Orchestrated
+                </text>
+                <text
+                  x="260"
+                  y="175"
+                  text-anchor="middle"
+                  fill="#A1AABB"
+                  font-size="11"
+                >
+                  workflow
                 </text>
                 <rect
-                  x="175"
-                  y="62"
-                  width="170"
-                  height="46"
-                  rx="10"
-                  fill="#1c212c"
-                  stroke="#E0C15A"
-                  stroke-width="1.3"
-                  stroke-dasharray="6 3"
+                  x="218"
+                  y="188"
+                  width="84"
+                  height="18"
+                  rx="9"
+                  fill="#7AA89F"
+                  opacity="0.12"
                 />
                 <text
                   x="260"
-                  y="82"
+                  y="201"
                   text-anchor="middle"
-                  fill="#E0C15A"
-                  font-size="10.5"
+                  fill="#7AA89F"
+                  font-size="10"
                   font-weight="600"
                 >
-                  ORCHESTRATOR
+                  Structure
+                </text>
+                <rect
+                  x="350"
+                  y="62"
+                  width="140"
+                  height="150"
+                  rx="12"
+                  fill="#1c212c"
+                  stroke="#DEBA87"
+                  stroke-width="1.5"
+                />
+                <rect
+                  x="350"
+                  y="62"
+                  width="140"
+                  height="4"
+                  rx="2"
+                  fill="#DEBA87"
+                  opacity="0.7"
+                />
+                <rect
+                  x="407"
+                  y="84"
+                  width="26"
+                  height="32"
+                  rx="3"
+                  fill="none"
+                  stroke="#DEBA87"
+                  stroke-width="1.5"
+                  filter="url(#s41-glow)"
+                />
+                <line
+                  x1="413"
+                  y1="97"
+                  x2="427"
+                  y2="97"
+                  stroke="#DEBA87"
+                  stroke-width="1"
+                  opacity="0.6"
+                />
+                <line
+                  x1="413"
+                  y1="103"
+                  x2="425"
+                  y2="103"
+                  stroke="#DEBA87"
+                  stroke-width="1"
+                  opacity="0.6"
+                />
+                <line
+                  x1="413"
+                  y1="109"
+                  x2="422"
+                  y2="109"
+                  stroke="#DEBA87"
+                  stroke-width="1"
+                  opacity="0.6"
+                />
+                <text
+                  x="420"
+                  y="140"
+                  text-anchor="middle"
+                  fill="#DEBA87"
+                  font-size="14"
+                  font-weight="700"
+                >
+                  Skills
                 </text>
                 <text
-                  x="260"
-                  y="97"
+                  x="420"
+                  y="160"
                   text-anchor="middle"
-                  fill="#8394A3"
-                  font-size="7.5"
+                  fill="#A1AABB"
+                  font-size="11"
                 >
-                  lightweight · only coordinates
+                  Encoded
+                </text>
+                <text
+                  x="420"
+                  y="175"
+                  text-anchor="middle"
+                  fill="#A1AABB"
+                  font-size="11"
+                >
+                  patterns
+                </text>
+                <rect
+                  x="378"
+                  y="188"
+                  width="84"
+                  height="18"
+                  rx="9"
+                  fill="#DEBA87"
+                  opacity="0.12"
+                />
+                <text
+                  x="420"
+                  y="201"
+                  text-anchor="middle"
+                  fill="#DEBA87"
+                  font-size="10"
+                  font-weight="600"
+                >
+                  Consistency
                 </text>
                 <line
-                  x1="218"
-                  y1="108"
-                  x2="100"
-                  y2="155"
-                  stroke="url(#s13-line)"
-                  stroke-width="1"
-                  stroke-dasharray="4 3"
+                  x1="100"
+                  y1="220"
+                  x2="245"
+                  y2="272"
+                  stroke="#A1AABB"
+                  stroke-width="1.2"
+                  marker-end="url(#s41-arrow)"
+                  opacity="0.7"
                 />
                 <line
                   x1="260"
-                  y1="108"
+                  y1="220"
                   x2="260"
-                  y2="155"
-                  stroke="url(#s13-line)"
-                  stroke-width="1"
-                  stroke-dasharray="4 3"
+                  y2="268"
+                  stroke="#A1AABB"
+                  stroke-width="1.2"
+                  marker-end="url(#s41-arrow)"
+                  opacity="0.7"
                 />
                 <line
-                  x1="302"
-                  y1="108"
-                  x2="420"
-                  y2="155"
-                  stroke="url(#s13-line)"
-                  stroke-width="1"
-                  stroke-dasharray="4 3"
-                />
-                <text
-                  x="152"
-                  y="134"
-                  text-anchor="middle"
-                  fill="#8394A3"
-                  font-size="6.5"
-                  opacity="0.7"
-                >
-                  spawn
-                </text>
-                <text
-                  x="260"
-                  y="134"
-                  text-anchor="middle"
-                  fill="#8394A3"
-                  font-size="6.5"
-                  opacity="0.7"
-                >
-                  spawn
-                </text>
-                <text
-                  x="368"
-                  y="134"
-                  text-anchor="middle"
-                  fill="#8394A3"
-                  font-size="6.5"
-                  opacity="0.7"
-                >
-                  spawn
-                </text>
-                <g opacity="0.92">
-                  <rect
-                    x="30"
-                    y="152"
-                    width="140"
-                    height="108"
-                    rx="12"
-                    fill="#1c212c"
-                    stroke="#7FB4CA"
-                    stroke-width="1.2"
-                    stroke-dasharray="5 3"
-                  />
-                  <rect
-                    x="42"
-                    y="178"
-                    width="116"
-                    height="32"
-                    rx="6"
-                    fill="#232A36"
-                    stroke="#313342"
-                    stroke-width="0.5"
-                    opacity="0.6"
-                  />
-                  <text
-                    x="100"
-                    y="196"
-                    text-anchor="middle"
-                    fill="#8394A3"
-                    font-size="7"
-                    opacity="0.5"
-                    font-style="italic"
-                  >
-                    empty context
-                  </text>
-                  <circle
-                    cx="56"
-                    cy="166"
-                    r="3.5"
-                    fill="#7FB4CA"
-                    opacity="0.7"
-                  />
-                  <text
-                    x="66"
-                    y="169.5"
-                    fill="#7FB4CA"
-                    font-size="10.5"
-                    font-weight="600"
-                  >
-                    Explore
-                  </text>
-                  <g transform="translate(42, 222)">
-                    <text
-                      x="0"
-                      y="0"
-                      fill="#7FB4CA"
-                      font-size="6.5"
-                      opacity="0.8"
-                    >
-                      born
-                    </text>
-                    <text x="27" y="0" fill="#8394A3" font-size="6.5">→</text>
-                    <text x="34" y="0" fill="#A1AABB" font-size="6.5">
-                      execute
-                    </text>
-                    <text x="70" y="0" fill="#8394A3" font-size="6.5">→</text>
-                    <text x="77" y="0" fill="#A1AABB" font-size="6.5">
-                      report
-                    </text>
-                    <text x="113" y="0" fill="#8394A3" font-size="6.5">→</text>
-                    <text
-                      x="120"
-                      y="0"
-                      fill="#CB7C94"
-                      font-size="7"
-                      font-weight="600"
-                    >
-                      ✕
-                    </text>
-                  </g>
-                </g>
-                <g opacity="0.92">
-                  <rect
-                    x="190"
-                    y="152"
-                    width="140"
-                    height="108"
-                    rx="12"
-                    fill="#1c212c"
-                    stroke="#A3B5D6"
-                    stroke-width="1.2"
-                    stroke-dasharray="5 3"
-                  />
-                  <rect
-                    x="202"
-                    y="178"
-                    width="116"
-                    height="32"
-                    rx="6"
-                    fill="#232A36"
-                    stroke="#313342"
-                    stroke-width="0.5"
-                    opacity="0.6"
-                  />
-                  <text
-                    x="260"
-                    y="196"
-                    text-anchor="middle"
-                    fill="#8394A3"
-                    font-size="7"
-                    opacity="0.5"
-                    font-style="italic"
-                  >
-                    empty context
-                  </text>
-                  <circle
-                    cx="216"
-                    cy="166"
-                    r="3.5"
-                    fill="#A3B5D6"
-                    opacity="0.7"
-                  />
-                  <text
-                    x="226"
-                    y="169.5"
-                    fill="#A3B5D6"
-                    font-size="10.5"
-                    font-weight="600"
-                  >
-                    Design
-                  </text>
-                  <g transform="translate(202, 222)">
-                    <text
-                      x="0"
-                      y="0"
-                      fill="#A3B5D6"
-                      font-size="6.5"
-                      opacity="0.8"
-                    >
-                      born
-                    </text>
-                    <text x="27" y="0" fill="#8394A3" font-size="6.5">→</text>
-                    <text x="34" y="0" fill="#A1AABB" font-size="6.5">
-                      execute
-                    </text>
-                    <text x="70" y="0" fill="#8394A3" font-size="6.5">→</text>
-                    <text x="77" y="0" fill="#A1AABB" font-size="6.5">
-                      report
-                    </text>
-                    <text x="113" y="0" fill="#8394A3" font-size="6.5">→</text>
-                    <text
-                      x="120"
-                      y="0"
-                      fill="#CB7C94"
-                      font-size="7"
-                      font-weight="600"
-                    >
-                      ✕
-                    </text>
-                  </g>
-                </g>
-                <g opacity="0.92">
-                  <rect
-                    x="350"
-                    y="152"
-                    width="140"
-                    height="108"
-                    rx="12"
-                    fill="#1c212c"
-                    stroke="#B7CC85"
-                    stroke-width="1.2"
-                    stroke-dasharray="5 3"
-                  />
-                  <rect
-                    x="362"
-                    y="178"
-                    width="116"
-                    height="32"
-                    rx="6"
-                    fill="#232A36"
-                    stroke="#313342"
-                    stroke-width="0.5"
-                    opacity="0.6"
-                  />
-                  <text
-                    x="420"
-                    y="196"
-                    text-anchor="middle"
-                    fill="#8394A3"
-                    font-size="7"
-                    opacity="0.5"
-                    font-style="italic"
-                  >
-                    empty context
-                  </text>
-                  <circle
-                    cx="376"
-                    cy="166"
-                    r="3.5"
-                    fill="#B7CC85"
-                    opacity="0.7"
-                  />
-                  <text
-                    x="386"
-                    y="169.5"
-                    fill="#B7CC85"
-                    font-size="10.5"
-                    font-weight="600"
-                  >
-                    Implement
-                  </text>
-                  <g transform="translate(362, 222)">
-                    <text
-                      x="0"
-                      y="0"
-                      fill="#B7CC85"
-                      font-size="6.5"
-                      opacity="0.8"
-                    >
-                      born
-                    </text>
-                    <text x="27" y="0" fill="#8394A3" font-size="6.5">→</text>
-                    <text x="34" y="0" fill="#A1AABB" font-size="6.5">
-                      execute
-                    </text>
-                    <text x="70" y="0" fill="#8394A3" font-size="6.5">→</text>
-                    <text x="77" y="0" fill="#A1AABB" font-size="6.5">
-                      report
-                    </text>
-                    <text x="113" y="0" fill="#8394A3" font-size="6.5">→</text>
-                    <text
-                      x="120"
-                      y="0"
-                      fill="#CB7C94"
-                      font-size="7"
-                      font-weight="600"
-                    >
-                      ✕
-                    </text>
-                  </g>
-                </g>
-                <rect
-                  x="145"
-                  y="275"
-                  width="230"
-                  height="24"
-                  rx="6"
-                  fill="#232A36"
-                  stroke="#313342"
-                  stroke-width="0.6"
+                  x1="420"
+                  y1="220"
+                  x2="275"
+                  y2="272"
+                  stroke="#A1AABB"
+                  stroke-width="1.2"
+                  marker-end="url(#s41-arrow)"
                   opacity="0.7"
                 />
-                <text
-                  x="260"
-                  y="289"
-                  text-anchor="middle"
+                <circle
+                  cx="260"
+                  cy="280"
+                  r="6"
                   fill="#E0C15A"
-                  font-size="8.5"
-                  font-weight="500"
-                  letter-spacing="0.5"
-                >
-                  Fresh context on each task
-                </text>
-                <line
-                  x1="138"
-                  y1="233"
-                  x2="142"
-                  y2="233"
+                  opacity="0.3"
+                  filter="url(#s41-glowSoft)"
+                />
+                <circle cx="260" cy="280" r="3" fill="#E0C15A" />
+                <rect
+                  x="60"
+                  y="300"
+                  width="400"
+                  height="36"
+                  rx="10"
+                  fill="#1c212c"
                   stroke="#313342"
                   stroke-width="1"
-                  stroke-dasharray="2 2"
-                  opacity="0.5"
-                />
-                <line
-                  x1="258"
-                  y1="233"
-                  x2="262"
-                  y2="233"
-                  stroke="#313342"
-                  stroke-width="1"
-                  stroke-dasharray="2 2"
-                  opacity="0.5"
-                />
-                <line
-                  x1="378"
-                  y1="233"
-                  x2="382"
-                  y2="233"
-                  stroke="#313342"
-                  stroke-width="1"
-                  stroke-dasharray="2 2"
-                  opacity="0.5"
-                />
-                <line
-                  x1="80"
-                  y1="305"
-                  x2="440"
-                  y2="305"
-                  stroke="#313342"
-                  stroke-width="0.5"
-                  opacity="0.5"
                 />
                 <text
                   x="260"
-                  y="320"
+                  y="318"
                   text-anchor="middle"
+                  fill="#F3F6F9"
                   font-size="11"
-                  fill="#B7CC85"
-                  font-weight="500"
-                  opacity="0.9"
+                  font-weight="600"
                 >
-                  High precision, near-zero noise
+                  LLM without amnesia, degradation, or genericity
                 </text>
                 <text
                   x="260"
                   y="330"
                   text-anchor="middle"
-                  font-size="8"
                   fill="#8394A3"
+                  font-size="9"
                 >
-                  Lightweight spwan · Minimun ctx · Total focus
+                  Continuity + Structure + Consistency = Professional System
                 </text>
+              </svg>
+            </figure>
+          </article>
 
-              </svg>
-            </figure>
-          </article>
-<article
+          <article
             class="slide"
-            data-index="10"
-            data-module="4"
-            data-tone="red"
-          >
-            <div class="slide-content">
-              <p class="slide-kicker">11 · 2nd Context Evolution</p>
-              <h2>Sub-agent approach</h2>
-              <p>
-                Each sub-agent is born with an empty state. Only receives
-                instructions for its phase. Doesn't drag noise from previous
-                phases. That's the key architectural advantage.
-              </p>
-            </div>
-            <figure class="slide-figure">
-              <svg
-                viewBox="0 0 520 360"
-                xmlns="http://www.w3.org/2000/svg"
-                font-family="Space Grotesk,sans-serif"
-              >
-                <defs>
-                  <filter id="s17-glow-red">
-                    <feGaussianBlur stdDeviation="6" result="blur" />
-                    <feMerge>
-                      <feMergeNode in="blur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                  <filter id="s17-glow-green">
-                    <feGaussianBlur stdDeviation="6" result="blur" />
-                    <feMerge>
-                      <feMergeNode in="blur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                  <filter id="s17-noise-blur">
-                    <feGaussianBlur stdDeviation="1.8" />
-                  </filter>
-                  <filter id="s17-noise-blur2">
-                    <feGaussianBlur stdDeviation="2.5" />
-                  </filter>
-                  <filter id="s17-noise-blur3">
-                    <feGaussianBlur stdDeviation="3.2" />
-                  </filter>
-                  <filter id="s17-title-glow">
-                    <feGaussianBlur stdDeviation="8" result="blur" />
-                    <feMerge>
-                      <feMergeNode in="blur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                  <linearGradient id="s17-red-fill" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#CB7C94" stop-opacity="0.5" />
-                    <stop
-                      offset="40%"
-                      stop-color="#CB7C94"
-                      stop-opacity="0.25"
-                    />
-                    <stop
-                      offset="100%"
-                      stop-color="#CB7C94"
-                      stop-opacity="0.08"
-                    />
-                  </linearGradient>
-                  <linearGradient
-                    id="s17-green-fill"
-                    x1="0"
-                    y1="1"
-                    x2="0"
-                    y2="0"
-                  >
-                    <stop offset="0%" stop-color="#B7CC85" stop-opacity="0.6" />
-                    <stop
-                      offset="70%"
-                      stop-color="#B7CC85"
-                      stop-opacity="0.3"
-                    />
-                    <stop
-                      offset="100%"
-                      stop-color="#B7CC85"
-                      stop-opacity="0.1"
-                    />
-                  </linearGradient>
-                  <clipPath id="s17-bar-left">
-                    <rect x="60" y="100" width="120" height="190" rx="10" />
-                  </clipPath>
-                  <clipPath id="s17-bar-right">
-                    <rect x="340" y="100" width="120" height="190" rx="10" />
-                  </clipPath>
-                </defs>
-                <text
-                  x="260"
-                  y="32"
-                  text-anchor="middle"
-                  font-size="10"
-                  letter-spacing="2"
-                  fill="#A1AABB"
-                  text-transform="uppercase"
-                >
-                  COMPARISON
-                </text>
-                <text
-                  x="260"
-                  y="58"
-                  text-anchor="middle"
-                  font-size="18"
-                  font-weight="600"
-                  fill="#F3F6F9"
-                  filter="url(#s17-title-glow)"
-                >
-                  Fresh context: starting clean
-                </text>
-                <text
-                  x="120"
-                  y="88"
-                  text-anchor="middle"
-                  font-size="11"
-                  font-weight="700"
-                  fill="#CB7C94"
-                  letter-spacing="1.5"
-                  filter="url(#s17-glow-red)"
-                >
-                  GOD AGENT
-                </text>
-                <rect
-                  x="60"
-                  y="100"
-                  width="120"
-                  height="190"
-                  rx="10"
-                  fill="none"
-                  stroke="#CB7C94"
-                  stroke-opacity="0.3"
-                  stroke-width="1.5"
-                />
-                <rect
-                  x="60"
-                  y="100"
-                  width="120"
-                  height="190"
-                  rx="10"
-                  fill="#1c212c"
-                  opacity="0.7"
-                />
-                <rect
-                  x="60"
-                  y="128"
-                  width="120"
-                  height="162"
-                  rx="0"
-                  fill="url(#s17-red-fill)"
-                  clip-path="url(#s17-bar-left)"
-                />
-                <g clip-path="url(#s17-bar-left)" opacity="0.6">
-                  <rect
-                    x="68"
-                    y="256"
-                    width="104"
-                    height="22"
-                    rx="4"
-                    fill="#8394A3"
-                    opacity="0.5"
-                    filter="url(#s17-noise-blur3)"
-                  />
-                  <text
-                    x="120"
-                    y="271"
-                    text-anchor="middle"
-                    font-size="6"
-                    fill="#A1AABB"
-                    opacity="0.4"
-                    filter="url(#s17-noise-blur)"
-                  >
-                    prev context...
-                  </text>
-                  <rect
-                    x="68"
-                    y="228"
-                    width="104"
-                    height="22"
-                    rx="4"
-                    fill="#8394A3"
-                    opacity="0.45"
-                    filter="url(#s17-noise-blur2)"
-                  />
-                  <text
-                    x="120"
-                    y="243"
-                    text-anchor="middle"
-                    font-size="6"
-                    fill="#A1AABB"
-                    opacity="0.35"
-                    filter="url(#s17-noise-blur)"
-                  >
-                    old tool calls...
-                  </text>
-                  <rect
-                    x="68"
-                    y="200"
-                    width="104"
-                    height="22"
-                    rx="4"
-                    fill="#8394A3"
-                    opacity="0.4"
-                    filter="url(#s17-noise-blur2)"
-                  />
-                  <text
-                    x="120"
-                    y="215"
-                    text-anchor="middle"
-                    font-size="6"
-                    fill="#A1AABB"
-                    opacity="0.3"
-                    filter="url(#s17-noise-blur)"
-                  >
-                    stale files...
-                  </text>
-                  <rect
-                    x="68"
-                    y="172"
-                    width="104"
-                    height="22"
-                    rx="4"
-                    fill="#8394A3"
-                    opacity="0.35"
-                    filter="url(#s17-noise-blur3)"
-                  />
-                  <text
-                    x="120"
-                    y="187"
-                    text-anchor="middle"
-                    font-size="6"
-                    fill="#A1AABB"
-                    opacity="0.25"
-                    filter="url(#s17-noise-blur2)"
-                  >
-                    wrong paths...
-                  </text>
-                  <rect
-                    x="68"
-                    y="144"
-                    width="104"
-                    height="22"
-                    rx="4"
-                    fill="#8394A3"
-                    opacity="0.3"
-                    filter="url(#s17-noise-blur3)"
-                  />
-                  <text
-                    x="120"
-                    y="159"
-                    text-anchor="middle"
-                    font-size="6"
-                    fill="#A1AABB"
-                    opacity="0.2"
-                    filter="url(#s17-noise-blur2)"
-                  >
-                    hallucinations...
-                  </text>
-                  <rect
-                    x="68"
-                    y="128"
-                    width="104"
-                    height="12"
-                    rx="4"
-                    fill="#CB7C94"
-                    opacity="0.15"
-                    filter="url(#s17-noise-blur3)"
-                  />
-                </g>
-                <line
-                  x1="55"
-                  y1="128"
-                  x2="185"
-                  y2="128"
-                  stroke="#CB7C94"
-                  stroke-opacity="0.4"
-                  stroke-width="0.5"
-                  stroke-dasharray="3,3"
-                />
-                <text
-                  x="186"
-                  y="132"
-                  font-size="7"
-                  fill="#CB7C94"
-                  opacity="0.7"
-                >
-                  85%
-                </text>
-                <text
-                  x="120"
-                  y="308"
-                  text-anchor="middle"
-                  font-size="8"
-                  fill="#CB7C94"
-                  opacity="0.9"
-                >
-                  85% used
-                </text>
-                <text
-                  x="120"
-                  y="320"
-                  text-anchor="middle"
-                  font-size="7"
-                  fill="#A1AABB"
-                >
-                  accumulated noise
-                </text>
-                <g transform="translate(112,270)">
-                  <polygon
-                    points="8,0 16,14 0,14"
-                    fill="none"
-                    stroke="#CB7C94"
-                    stroke-width="1"
-                    opacity="0.6"
-                  />
-                  <text
-                    x="8"
-                    y="12"
-                    text-anchor="middle"
-                    font-size="8"
-                    fill="#CB7C94"
-                    font-weight="700"
-                    opacity="0.7"
-                  >
-                    !
-                  </text>
-                </g>
-                <line
-                  x1="260"
-                  y1="85"
-                  x2="260"
-                  y2="300"
-                  stroke="#313342"
-                  stroke-width="1"
-                  stroke-dasharray="4,6"
-                />
-                <rect
-                  x="240"
-                  y="182"
-                  width="40"
-                  height="24"
-                  rx="8"
-                  fill="#232A36"
-                  stroke="#313342"
-                  stroke-width="1"
-                />
-                <text
-                  x="260"
-                  y="198"
-                  text-anchor="middle"
-                  font-size="10"
-                  font-weight="700"
-                  fill="#8394A3"
-                >
-                  VS
-                </text>
-                <text
-                  x="400"
-                  y="88"
-                  text-anchor="middle"
-                  font-size="11"
-                  font-weight="700"
-                  fill="#B7CC85"
-                  letter-spacing="1.5"
-                  filter="url(#s17-glow-green)"
-                >
-                  SUB-AGENT
-                </text>
-                <rect
-                  x="340"
-                  y="100"
-                  width="120"
-                  height="190"
-                  rx="10"
-                  fill="none"
-                  stroke="#B7CC85"
-                  stroke-opacity="0.3"
-                  stroke-width="1.5"
-                />
-                <rect
-                  x="340"
-                  y="100"
-                  width="120"
-                  height="190"
-                  rx="10"
-                  fill="#1c212c"
-                  opacity="0.4"
-                />
-                <rect
-                  x="340"
-                  y="261"
-                  width="120"
-                  height="29"
-                  rx="0"
-                  fill="url(#s17-green-fill)"
-                  clip-path="url(#s17-bar-right)"
-                />
-                <g clip-path="url(#s17-bar-right)">
-                  <rect
-                    x="348"
-                    y="266"
-                    width="104"
-                    height="18"
-                    rx="4"
-                    fill="#B7CC85"
-                    opacity="0.2"
-                  />
-<text
-                  x="400"
-                  y="278"
-                  text-anchor="middle"
-                  font-size="7"
-                  fill="#B7CC85"
-                  font-weight="600"
-                  opacity="0.9"
-                >
-                  focused task
-                </text>
-                </g>
-                <line
-                  x1="335"
-                  y1="261"
-                  x2="465"
-                  y2="261"
-                  stroke="#B7CC85"
-                  stroke-opacity="0.4"
-                  stroke-width="0.5"
-                  stroke-dasharray="3,3"
-                />
-                <text
-                  x="466"
-                  y="265"
-                  font-size="7"
-                  fill="#B7CC85"
-                  opacity="0.7"
-                >
-                  15%
-                </text>
-                <g opacity="0.15">
-                  <circle cx="400" cy="140" r="1.5" fill="#B7CC85" />
-                  <circle cx="400" cy="165" r="1.5" fill="#B7CC85" />
-                  <circle cx="400" cy="190" r="1.5" fill="#B7CC85" />
-                  <circle cx="400" cy="215" r="1.5" fill="#B7CC85" />
-                  <circle cx="400" cy="240" r="1.5" fill="#B7CC85" />
-                </g>
-                <text
-                  x="400"
-                  y="308"
-                  text-anchor="middle"
-                  font-size="8"
-                  fill="#B7CC85"
-                  opacity="0.9"
-                >
-                  15% used
-                </text>
-                <text
-                  x="400"
-                  y="320"
-                  text-anchor="middle"
-                  font-size="7"
-                  fill="#A1AABB"
-                >
-                  only its task
-                </text>
-              </svg>
-            </figure>
-          </article>
-<article
-            class="slide"
-            data-index="11"
-            data-module="5"
+            data-index="1"
+            data-module="1"
             data-tone="cyan"
           >
             <div class="slide-content">
-              <p class="slide-kicker">12 · SDD Orchestrator</p>
+              <p class="slide-kicker">02 · Ecosystem Overview</p>
               <h2>Engineering AI workflows</h2>
               <p>
                 Instead of "ask and pray," we structure the work on an assembly
@@ -4430,12 +945,12 @@
           </article>
 <article
             class="slide"
-            data-index="12"
-            data-module="5"
+            data-index="2"
+            data-module="1"
             data-tone="cyan"
           >
             <div class="slide-content">
-              <p class="slide-kicker">13 · SDD Orchestrator</p>
+              <p class="slide-kicker">03 · SDD Orchestrator</p>
               <h2>Specialized roles</h2>
               <p>
                 Explorer (reads code), Proposer (defines what), Spec Writer
@@ -4966,12 +1481,12 @@
           </article>
 <article
             class="slide"
-            data-index="13"
-            data-module="5"
+            data-index="3"
+            data-module="1"
             data-tone="cyan"
           >
             <div class="slide-content">
-              <p class="slide-kicker">14 · SDD Orchestrator</p>
+              <p class="slide-kicker">04 · SDD Orchestrator</p>
               <h2>Real example: creating users endpoint</h2>
               <p>
                 /sdd:new → Explorer detects stack → Proposer defines scope →
@@ -5401,12 +1916,12 @@
           </article>
 <article
             class="slide"
-            data-index="14"
-            data-module="6"
+            data-index="4"
+            data-module="2"
             data-tone="magenta"
           >
             <div class="slide-content">
-              <p class="slide-kicker">15 · Engram</p>
+              <p class="slide-kicker">05 · Engram</p>
               <h2>Compaction kills decisions</h2>
               <p>
                 You work 2 hours defining architecture. The system compacts.
@@ -5825,12 +2340,12 @@
           </article>
 <article
             class="slide"
-            data-index="15"
-            data-module="6"
+            data-index="5"
+            data-module="2"
             data-tone="magenta"
           >
             <div class="slide-content">
-              <p class="slide-kicker">16 · Engram</p>
+              <p class="slide-kicker">06 · Engram</p>
               <h2>Engram: save signals, not everything</h2>
               <p>
                 Engram does not save everything (that's noise). It save signals:
@@ -6290,12 +2805,12 @@
           </article>
 <article
             class="slide"
-            data-index="16"
-            data-module="6"
+            data-index="6"
+            data-module="2"
             data-tone="magenta"
           >
             <div class="slide-content">
-              <p class="slide-kicker">17 · Engram</p>
+              <p class="slide-kicker">07 · Engram</p>
               <h2>The Engram Loop: two sessions</h2>
               <p>
                 Session 1: design → mem_save. Session 2: implement → mem_search
@@ -6621,12 +3136,12 @@
           </article>
 <article
             class="slide"
-            data-index="17"
-            data-module="6"
+            data-index="7"
+            data-module="2"
             data-tone="magenta"
           >
             <div class="slide-content">
-              <p class="slide-kicker">18 · Engram</p>
+              <p class="slide-kicker">08 · Engram</p>
               <h2>Git or Cloud</h2>
               <p>
                 Two valid sync paths, both work for solo and team. Git sync uses
@@ -6708,682 +3223,7 @@
               </svg>
             </figure>
           </article>
-<article
-            class="slide"
-            data-index="18"
-            data-module="7"
-            data-tone="green"
-          >
-            <div class="slide-content">
-              <p class="slide-kicker">19 · Results</p>
-              <h2>Gentle-ai Ecosystem</h2>
-              <p>
-                Engram provides continuity, SDD provides structure, Skills
-                provides consistency. Together they solve the three problems
-                of the LLM: amnesia, degradation, and genericity.
-              </p>
-            </div>
-            <figure class="slide-figure">
-              <svg
-                viewBox="0 0 520 360"
-                xmlns="http://www.w3.org/2000/svg"
-                font-family="Space Grotesk,sans-serif"
-              >
-                <defs>
-                  <filter id="s41-glow">
-                    <feGaussianBlur stdDeviation="3" result="blur" />
-                    <feMerge>
-                      <feMergeNode in="blur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                  <filter id="s41-glowSoft">
-                    <feGaussianBlur stdDeviation="6" result="blur" />
-                    <feMerge>
-                      <feMergeNode in="blur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                  <marker
-                    id="s41-arrow"
-                    viewBox="0 0 10 10"
-                    refX="9"
-                    refY="5"
-                    markerWidth="6"
-                    markerHeight="6"
-                    orient="auto-start-reverse"
-                  >
-                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#A1AABB" />
-                  </marker>
-                </defs>
-                <text
-                  x="260"
-                  y="32"
-                  text-anchor="middle"
-                  fill="#F3F6F9"
-                  font-size="16"
-                  font-weight="700"
-                >
-                  Engram + SDD + Skills
-                </text>
-                <rect
-                  x="30"
-                  y="62"
-                  width="140"
-                  height="150"
-                  rx="12"
-                  fill="#1c212c"
-                  stroke="#FF8DD7"
-                  stroke-width="1.5"
-                />
-                <rect
-                  x="30"
-                  y="62"
-                  width="140"
-                  height="4"
-                  rx="2"
-                  fill="#FF8DD7"
-                  opacity="0.7"
-                />
-                <ellipse
-                  cx="100"
-                  cy="97"
-                  rx="18"
-                  ry="7"
-                  fill="none"
-                  stroke="#FF8DD7"
-                  stroke-width="1.5"
-                  filter="url(#s41-glow)"
-                />
-                <path
-                  d="M82 97 v18 c0 3.9 8 7 18 7 s18-3.1 18-7 v-18"
-                  fill="none"
-                  stroke="#FF8DD7"
-                  stroke-width="1.5"
-                />
-                <text
-                  x="100"
-                  y="140"
-                  text-anchor="middle"
-                  fill="#FF8DD7"
-                  font-size="14"
-                  font-weight="700"
-                >
-                  Engram
-                </text>
-                <text
-                  x="100"
-                  y="160"
-                  text-anchor="middle"
-                  fill="#A1AABB"
-                  font-size="11"
-                >
-                  Persistent
-                </text>
-                <text
-                  x="100"
-                  y="175"
-                  text-anchor="middle"
-                  fill="#A1AABB"
-                  font-size="11"
-                >
-                  memory
-                </text>
-                <rect
-                  x="58"
-                  y="188"
-                  width="84"
-                  height="18"
-                  rx="9"
-                  fill="#FF8DD7"
-                  opacity="0.12"
-                />
-                <text
-                  x="100"
-                  y="201"
-                  text-anchor="middle"
-                  fill="#FF8DD7"
-                  font-size="10"
-                  font-weight="600"
-                >
-                  Continuity
-                </text>
-                <rect
-                  x="190"
-                  y="62"
-                  width="140"
-                  height="150"
-                  rx="12"
-                  fill="#1c212c"
-                  stroke="#7AA89F"
-                  stroke-width="1.5"
-                />
-                <rect
-                  x="190"
-                  y="62"
-                  width="140"
-                  height="4"
-                  rx="2"
-                  fill="#7AA89F"
-                  opacity="0.7"
-                />
-                <circle
-                  cx="260"
-                  cy="88"
-                  r="5"
-                  fill="none"
-                  stroke="#7AA89F"
-                  stroke-width="1.5"
-                  filter="url(#s41-glow)"
-                />
-                <circle
-                  cx="245"
-                  cy="108"
-                  r="5"
-                  fill="none"
-                  stroke="#7AA89F"
-                  stroke-width="1.5"
-                />
-                <circle
-                  cx="275"
-                  cy="108"
-                  r="5"
-                  fill="none"
-                  stroke="#7AA89F"
-                  stroke-width="1.5"
-                />
-                <circle
-                  cx="260"
-                  cy="122"
-                  r="5"
-                  fill="none"
-                  stroke="#7AA89F"
-                  stroke-width="1.5"
-                />
-                <line
-                  x1="257"
-                  y1="93"
-                  x2="248"
-                  y2="103"
-                  stroke="#7AA89F"
-                  stroke-width="1.2"
-                />
-                <line
-                  x1="263"
-                  y1="93"
-                  x2="272"
-                  y2="103"
-                  stroke="#7AA89F"
-                  stroke-width="1.2"
-                />
-                <line
-                  x1="248"
-                  y1="113"
-                  x2="257"
-                  y2="118"
-                  stroke="#7AA89F"
-                  stroke-width="1.2"
-                />
-                <line
-                  x1="272"
-                  y1="113"
-                  x2="263"
-                  y2="118"
-                  stroke="#7AA89F"
-                  stroke-width="1.2"
-                />
-                <text
-                  x="260"
-                  y="140"
-                  text-anchor="middle"
-                  fill="#7AA89F"
-                  font-size="14"
-                  font-weight="700"
-                >
-                  SDD
-                </text>
-                <text
-                  x="260"
-                  y="160"
-                  text-anchor="middle"
-                  fill="#A1AABB"
-                  font-size="11"
-                >
-                  Orchestrated
-                </text>
-                <text
-                  x="260"
-                  y="175"
-                  text-anchor="middle"
-                  fill="#A1AABB"
-                  font-size="11"
-                >
-                  workflow
-                </text>
-                <rect
-                  x="218"
-                  y="188"
-                  width="84"
-                  height="18"
-                  rx="9"
-                  fill="#7AA89F"
-                  opacity="0.12"
-                />
-                <text
-                  x="260"
-                  y="201"
-                  text-anchor="middle"
-                  fill="#7AA89F"
-                  font-size="10"
-                  font-weight="600"
-                >
-                  Structure
-                </text>
-                <rect
-                  x="350"
-                  y="62"
-                  width="140"
-                  height="150"
-                  rx="12"
-                  fill="#1c212c"
-                  stroke="#DEBA87"
-                  stroke-width="1.5"
-                />
-                <rect
-                  x="350"
-                  y="62"
-                  width="140"
-                  height="4"
-                  rx="2"
-                  fill="#DEBA87"
-                  opacity="0.7"
-                />
-                <rect
-                  x="407"
-                  y="84"
-                  width="26"
-                  height="32"
-                  rx="3"
-                  fill="none"
-                  stroke="#DEBA87"
-                  stroke-width="1.5"
-                  filter="url(#s41-glow)"
-                />
-                <line
-                  x1="413"
-                  y1="97"
-                  x2="427"
-                  y2="97"
-                  stroke="#DEBA87"
-                  stroke-width="1"
-                  opacity="0.6"
-                />
-                <line
-                  x1="413"
-                  y1="103"
-                  x2="425"
-                  y2="103"
-                  stroke="#DEBA87"
-                  stroke-width="1"
-                  opacity="0.6"
-                />
-                <line
-                  x1="413"
-                  y1="109"
-                  x2="422"
-                  y2="109"
-                  stroke="#DEBA87"
-                  stroke-width="1"
-                  opacity="0.6"
-                />
-                <text
-                  x="420"
-                  y="140"
-                  text-anchor="middle"
-                  fill="#DEBA87"
-                  font-size="14"
-                  font-weight="700"
-                >
-                  Skills
-                </text>
-                <text
-                  x="420"
-                  y="160"
-                  text-anchor="middle"
-                  fill="#A1AABB"
-                  font-size="11"
-                >
-                  Encoded
-                </text>
-                <text
-                  x="420"
-                  y="175"
-                  text-anchor="middle"
-                  fill="#A1AABB"
-                  font-size="11"
-                >
-                  patterns
-                </text>
-                <rect
-                  x="378"
-                  y="188"
-                  width="84"
-                  height="18"
-                  rx="9"
-                  fill="#DEBA87"
-                  opacity="0.12"
-                />
-                <text
-                  x="420"
-                  y="201"
-                  text-anchor="middle"
-                  fill="#DEBA87"
-                  font-size="10"
-                  font-weight="600"
-                >
-                  Consistency
-                </text>
-                <line
-                  x1="100"
-                  y1="220"
-                  x2="245"
-                  y2="272"
-                  stroke="#A1AABB"
-                  stroke-width="1.2"
-                  marker-end="url(#s41-arrow)"
-                  opacity="0.7"
-                />
-                <line
-                  x1="260"
-                  y1="220"
-                  x2="260"
-                  y2="268"
-                  stroke="#A1AABB"
-                  stroke-width="1.2"
-                  marker-end="url(#s41-arrow)"
-                  opacity="0.7"
-                />
-                <line
-                  x1="420"
-                  y1="220"
-                  x2="275"
-                  y2="272"
-                  stroke="#A1AABB"
-                  stroke-width="1.2"
-                  marker-end="url(#s41-arrow)"
-                  opacity="0.7"
-                />
-                <circle
-                  cx="260"
-                  cy="280"
-                  r="6"
-                  fill="#E0C15A"
-                  opacity="0.3"
-                  filter="url(#s41-glowSoft)"
-                />
-                <circle cx="260" cy="280" r="3" fill="#E0C15A" />
-                <rect
-                  x="60"
-                  y="300"
-                  width="400"
-                  height="36"
-                  rx="10"
-                  fill="#1c212c"
-                  stroke="#313342"
-                  stroke-width="1"
-                />
-                <text
-                  x="260"
-                  y="318"
-                  text-anchor="middle"
-                  fill="#F3F6F9"
-                  font-size="11"
-                  font-weight="600"
-                >
-                  LLM without amnesia, degradation, or genericity
-                </text>
-                <text
-                  x="260"
-                  y="330"
-                  text-anchor="middle"
-                  fill="#8394A3"
-                  font-size="9"
-                >
-                  Continuity + Structure + Consistency = Professional System
-                </text>
-              </svg>
-            </figure>
-          </article>
-<article
-            class="slide"
-            data-index="19"
-            data-module="7"
-            data-tone="green"
-          >
-            <div class="slide-content">
-              <p class="slide-kicker">20 · Results</p>
-              <h2>The Goodies</h2>
-              <p>
-                Speed ​​through automation. Consistency through skills. Quality through verification against specifications. Efficiency in memory and context window usage.
-              </p>
-            </div>
-            <figure class="slide-figure">
-              <svg
-                viewBox="0 0 520 360"
-                xmlns="http://www.w3.org/2000/svg"
-                font-family="Space Grotesk,sans-serif"
-              >
-                <defs>
-                  <filter
-                    id="s43-glow-yellow"
-                    x="-50%"
-                    y="-50%"
-                    width="200%"
-                    height="200%"
-                  >
-                    <feGaussianBlur stdDeviation="6" result="blur" />
-                    <feFlood flood-color="#E0C15A" flood-opacity="0.3" />
-                    <feComposite in2="blur" operator="in" />
-                    <feMerge>
-                      <feMergeNode />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                  <filter
-                    id="s43-glow-green"
-                    x="-50%"
-                    y="-50%"
-                    width="200%"
-                    height="200%"
-                  >
-                    <feGaussianBlur stdDeviation="6" result="blur" />
-                    <feFlood flood-color="#B7CC85" flood-opacity="0.3" />
-                    <feComposite in2="blur" operator="in" />
-                    <feMerge>
-                      <feMergeNode />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                  <filter
-                    id="s43-glow-blue"
-                    x="-50%"
-                    y="-50%"
-                    width="200%"
-                    height="200%"
-                  >
-                    <feGaussianBlur stdDeviation="6" result="blur" />
-                    <feFlood flood-color="#7FB4CA" flood-opacity="0.3" />
-                    <feComposite in2="blur" operator="in" />
-                    <feMerge>
-                      <feMergeNode />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                  <filter
-                    id="s43-glow-purple"
-                    x="-50%"
-                    y="-50%"
-                    width="200%"
-                    height="200%"
-                  >
-                    <feGaussianBlur stdDeviation="6" result="blur" />
-                    <feFlood flood-color="#B57EDC" flood-opacity="0.3" />
-                    <feComposite in2="blur" operator="in" />
-                    <feMerge>
-                      <feMergeNode />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                  <filter
-                    id="s43-card-shadow"
-                    x="-10%"
-                    y="-10%"
-                    width="120%"
-                    height="130%"
-                  >
-                    <feGaussianBlur stdDeviation="4" result="blur" />
-                    <feFlood flood-color="#000000" flood-opacity="0.25" />
-                    <feComposite in2="blur" operator="in" />
-                    <feMerge>
-                      <feMergeNode />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                </defs>
-                <foreignObject x="10" y="90" width="500" height="270">
-                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;gap:12px;justify-content:center;align-items:flex-start;flex-wrap:wrap;">
-                    <div style="background:#1c212c;border-radius:12px;padding:14px;width:108px;border-top:3px solid #E0C15A;box-shadow:0 4px 12px rgba(0,0,0,0.3);">
-                      <div style="text-align:center;margin-bottom:6px;">
-                        <div style="width:32px;height:32px;margin:0 auto;background:#232A36;border-radius:50%;border:2px solid #E0C15A;display:flex;align-items:center;justify-content:center;font-size:12px;">⚡</div>
-                      </div>
-                      <div style="text-align:center;font-size:13px;font-weight:700;color:#E0C15A;">Speed</div>
-                      <div style="text-align:center;font-size:8px;color:#A1AABB;margin-top:3px;">Flow</div>
-                      <div style="text-align:center;font-size:8px;color:#A1AABB;">automation</div>
-                    </div>
-                    <div style="background:#1c212c;border-radius:12px;padding:14px;width:108px;border-top:3px solid #B7CC85;box-shadow:0 4px 12px rgba(0,0,0,0.3);">
-                      <div style="text-align:center;margin-bottom:6px;">
-                        <div style="width:32px;height:32px;margin:0 auto;background:#232A36;border-radius:50%;border:2px solid #B7CC85;display:flex;align-items:center;justify-content:center;font-size:12px;">✓</div>
-                      </div>
-                      <div style="text-align:center;font-size:13px;font-weight:700;color:#B7CC85;">Consistency</div>
-                      <div style="text-align:center;font-size:8px;color:#A1AABB;margin-top:3px;">Standarized</div>
-                      <div style="text-align:center;font-size:8px;color:#A1AABB;">skills</div>
-                    </div>
-                    <div style="background:#1c212c;border-radius:12px;padding:14px;width:108px;border-top:3px solid #7FB4CA;box-shadow:0 4px 12px rgba(0,0,0,0.3);">
-                      <div style="text-align:center;margin-bottom:6px;">
-                        <div style="width:32px;height:32px;margin:0 auto;background:#232A36;border-radius:50%;border:2px solid #7FB4CA;display:flex;align-items:center;justify-content:center;font-size:12px;">★</div>
-                      </div>
-                      <div style="text-align:center;font-size:13px;font-weight:700;color:#7FB4CA;">Quality</div>
-                      <div style="text-align:center;font-size:8px;color:#A1AABB;margin-top:3px;">Validation</div>
-                      <div style="text-align:center;font-size:8px;color:#A1AABB;">against specs</div>
-                    </div>
-                    <div style="background:#1c212c;border-radius:12px;padding:14px;width:108px;border-top:3px solid #B57EDC;box-shadow:0 4px 12px rgba(0,0,0,0.3);">
-                      <div style="text-align:center;margin-bottom:6px;">
-                        <div style="width:32px;height:32px;margin:0 auto;background:#232A36;border-radius:50%;border:2px solid #B57EDC;display:flex;align-items:center;justify-content:center;font-size:12px;">♻</div>
-                      </div>
-                      <div style="text-align:center;font-size:13px;font-weight:700;color:#B57EDC;">Efficiency</div>
-                      <div style="text-align:center;font-size:8px;color:#A1AABB;margin-top:3px;">70% token</div>
-                      <div style="text-align:center;font-size:8px;color:#A1AABB;">savings</div>
-                    </div>
-                  </div>
-                </foreignObject>
-                <text
-                  x="260"
-                  y="62"
-                  text-anchor="middle"
-                  font-size="18"
-                  font-weight="600"
-                  fill="#F3F6F9"
-                >
-                  RESULTS
-                </text>
-                <line
-                  x1="100"
-                  y1="76"
-                  x2="420"
-                  y2="76"
-                  stroke="#313342"
-                  stroke-width="1"
-                  opacity="0.6"
-                />
 
-                <rect x="156" y="288" width="60" height="20" rx="6" fill="#232A36" stroke="#B7CC85" stroke-width="0.8"/>
-                <text x="186" y="301" text-anchor="middle" fill="#B7CC85" font-size="8">macOS</text>
-                <rect x="222" y="288" width="55" height="20" rx="6" fill="#232A36" stroke="#B7CC85" stroke-width="0.8"/>
-                <text x="249" y="301" text-anchor="middle" fill="#B7CC85" font-size="8">Linux</text>
-                <rect x="283" y="288" width="65" height="20" rx="6" fill="#232A36" stroke="#B7CC85" stroke-width="0.8"/>
-                <text x="315" y="301" text-anchor="middle" fill="#B7CC85" font-size="8">Windows</text>
-
-                <text
-                  x="260"
-                  y="340"
-                  text-anchor="middle"
-                  font-size="12"
-                  fill="#A1AABB"
-                  font-style="italic"
-                >
-                  The developer transitions from writing code to directing and validating
-                </text>
-              </svg>
-            </figure>
-</article>
-<article
-            class="slide"
-            data-index="20"
-            data-module="8"
-            data-tone="blue"
-          >
-            <div class="slide-content">
-              <p class="slide-kicker">21 · Closing</p>
-              <h2>Conclusion</h2>
-              <p>Gentle-AI stands out as a powerful ecosystem configurator that empowers developers to transcend simple chat interactions and adopt a robust, production-ready AI workflow. By integrating persistent memory, spec-driven development, and efficient sub-agent orchestration, it significantly enhances the productivity and reliability of existing AI agents.</p>
-              <hr style="opacity:0"/>
-              <p>While Gentle-AI offers a unique and streamlined experience, it is part of a growing landscape of sophisticated orchestration frameworks, each catering to different architectural needs and developer preferences.</p>
-            </div>
-<figure class="slide-figure" style="display:flex;flex-direction:column;align-items:center;gap:24px;padding:30px 20px;">
-              <div style="text-align:center;margin-bottom:10px;">
-                <h3 style="font-size:26px;font-weight:600;color:#F3F6F9;margin:12px 0 0;">RESOURCES</h3>
-              </div>
-
-              <div style="display:flex;flex-direction:column;gap:20px;width:100%;max-width:600px;">
-                <!-- Repo 1: gentle-ai (arriba) -->
-                <a href="https://github.com/Gentleman-Programming/gentle-ai" target="_blank" style="text-decoration:none;">
-                  <div style="background:#1c212c;border:1.5px solid #7FB4CA;border-radius:14px;padding:22px 28px;transition:transform 0.2s;">
-                    <div style="font-size:18px;font-weight:700;color:#7FB4CA;">GENTLE-AI</div>
-                    <div style="font-size:14px;color:#8394A3;margin:6px 0 10px;">AI-driven development orchestrator</div>
-                    <div style="font-size:13px;color:#7FB4CA;text-decoration:underline;">github.com/Gentleman-Programming/gentle-ai</div>
-                    <div style="font-size:12px;color:#8394A3;margin-top:8px;">SDD workflow</div>
-                  </div>
-                </a>
-
-                <!-- Repo 2 y 3 en fila -->
-                <div style="display:flex;gap:24px;justify-content:center;">
-                  <!-- Repo 2: Engram -->
-                  <a href="https://github.com/Gentleman-Programming/engram" target="_blank" style="text-decoration:none;flex:1;">
-                    <div style="background:#1c212c;border:1.5px solid #B7CC85;border-radius:14px;padding:18px 22px;transition:transform 0.2s;">
-                      <div style="font-size:16px;font-weight:700;color:#B7CC85;">ENGRAM</div>
-                      <div style="font-size:13px;color:#8394A3;margin:6px 0 8px;">Persistent memory for AI agents</div>
-                      <div style="font-size:12px;color:#7FB4CA;text-decoration:underline;">github.com/Gentleman-Programming/engram</div>
-                      <div style="font-size:11px;color:#8394A3;margin-top:6px;">local or cloud storage</div>
-                    </div>
-                  </a>
-
-                  <!-- Repo 3: Guardian Angel -->
-                  <a href="https://github.com/Gentleman-Programming/gentleman-guardian-angel" target="_blank" style="text-decoration:none;flex:1;">
-                    <div style="background:#1c212c;border:1.5px solid #E0C15A;border-radius:14px;padding:18px 22px;transition:transform 0.2s;">
-                      <div style="font-size:16px;font-weight:700;color:#E0C15A;">GUARDIAN ANGEL</div>
-                      <div style="font-size:13px;color:#8394A3;margin:6px 0 8px;">Autonomous coding agent</div>
-                      <div style="font-size:12px;color:#7FB4CA;text-decoration:underline;">github.com/Gentleman-Programming/gentleman-guardian-angel</div>
-                      <div style="font-size:11px;color:#8394A3;margin-top:6px;">autonomous code execution</div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div style="background:#1c212c;border:1.5px solid #DFBD76;border-radius:24px;padding:14px 32px;margin-top:10px;">
-                <span style="font-size:14px;font-weight:700;letter-spacing:3px;color:#DFBD76;">ALL OPEN SOURCE</span>
-              </div>
-            </figure>
-          </article>
         </main>
       </div>
 
