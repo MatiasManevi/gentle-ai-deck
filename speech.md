@@ -15,7 +15,7 @@
 - El contexto es todo lo que el modelo ve. Tamano fijo fisico medido en tokens.
 
 # Compaction forced amnesia
-- Habran notado que cuanto mas interactuamos con el mismo agente, el resultado suele desviarse cada vez mas de nuestro intencion inicial. El resultado se desdibuja porque aumenta el ruido. Porque aumenta el ruido? por la compactacion
+- Habran notado que cuanto mas interactuamos con el mismo agente, el resultado suele desviarse cada vez mas de nuestra intencion inicial. El resultado se desdibuja porque aumenta el ruido. Porque aumenta el ruido? por la compactacion
 - Porque se compacta?:
 - Se pierden decisiones iniciales tomadas
 - Ese summary forma parte de la siguiente prompt del usuario
@@ -37,7 +37,7 @@ pensar: ¿Qué pasaría si tuvieras skills con las convenciones específicas de 
 
 # God agent
 - Aun habiendo partido el agents.md en skills y donde cada skill provee contexto atomico y particular, un unico agente haciendose cargo de todas las tareas aun teniendo una ventana de contexto grande puede llegar a ocuparla al 80% antes de siquiera escribir codigo.
-- Con esto corremos el riesgo de compactar mucho contenido antes de implementar -> lo cual lleva la IA a alucinar "con el contexto que tengo, te puedo responder esto". En general se debe a ruido en la ventana de contexto y a las compactaciones del mismo.
+- Con esto corremos el riesgo de compactar mucho contenido antes de implementar -> lo cual lleva la IA a alucinar "con el contexto que tengo, te puedo responder esto"
 
 # Divide & Conquer
 - El orquestador no trabaja, solamente coordina sub agentes
@@ -66,6 +66,7 @@ pensar: ¿Qué pasaría si tuvieras skills con las convenciones específicas de 
 - Trabajás 2 horas definiendo arquitectura con el agente. El sistema compacta. El agente ya no recuerda que decidiste Clean Architecture con DI. Genera código genérico.
 - El problema no es solo "olvidar" — es perder decisiones específicas de arquitectura, patrones y convenciones que ya habías resuelto. El problema es no trabajar con consistencia
 - En un equipo de 3 devs cada uno pierde sus propias decisiones, y nunca se enteran que las repiten o se contradicen entre sí
+- Engram permite a los subagentes ir guardando informacion clave a medida que van trabajando.
 
 # Save signals, not everything
 - Engram no guarda todo (eso es ruido), guarda señales: decisiones, errores resueltos, patrones
