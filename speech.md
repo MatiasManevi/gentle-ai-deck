@@ -11,6 +11,10 @@
   - Servidores MCP
   - AI provider switcher
   - Persona docente con permisos security-first
+  Sin esto tenemos: contexto contaminado, ejecucion impredecible, cero trazabilidad. El harness de gentle ai ataca estos problemas
+  con una capa de procesos, contratos y estados verificables.
+  Gentle ai como filosofia: no es conjunto de prompts. Es mas bien una filosofia de runtime.
+  Gentle ai aplica SDD pero no tal cual OpenSpec sino con una vuelta de rosca: TDD estricto, orchestrator, phase subagents, verify stage+loopback.
 
 ### Slide 1
 - Pasamos de "ask and pray" a una línea de ensamblaje de expertos.
